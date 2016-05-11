@@ -4,7 +4,7 @@ package fr.iutvalence.info.dut.m2107;
  * @author canseva
  *
  */
-public class CarteCaisseDeCommunauté extends Cartes
+public class CarteCaisseDeCommunaute extends Cartes
 {
 	
 /**

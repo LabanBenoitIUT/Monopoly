@@ -1,7 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 /**
  * represent a game
- * @author Benoît Laban 
+ * @author benoit laban
  *
  */
 public class Partie

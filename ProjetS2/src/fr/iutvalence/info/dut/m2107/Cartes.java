@@ -23,7 +23,7 @@ private String texte;
 private int valeur;
 
 /**
- * Using to get the type of a card
+ * Used to get the type of a card
  * @return the type of a card
  */
 
@@ -34,7 +34,7 @@ public String getType()
 
 
 /**
- * Using to get the text of a card
+ * Used to get the text of a card
  * @return the text of a card
  */
 public String getTexte()
@@ -44,7 +44,7 @@ public String getTexte()
 
 
 /**
- * Using to get the value of a card
+ * Used to get the value of a card
  * @return the value of a card
  */
 public int getValeur()

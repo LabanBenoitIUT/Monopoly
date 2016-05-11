@@ -1,7 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 /**
  * represent a game
- * @author Benoît Laban 
+ * @author Benoit Laban 
  *
  */
 public class Partie
@@ -72,8 +72,51 @@ public class Partie
 	}
 	
 	/**
-	 * 
+	 * executerCarte: execute the effect of the card
 	 */
+	public void executerCarte(Cartes carte, Joueur joueur)
+	{
+		
+	}
 	
-
+	/**
+	 * gereGare: manage if the player is on a station
+	 */
+	public void GereGare(Cases Case, Joueur joueur)
+	{
+		
+	}
+	
+	/**
+	 * GereCompagnie: manage if the player is on a company
+	 */
+	public void GereCompagnie(Cases Case, Joueur joueur)
+	{
+		
+	}
+	
+	/**
+	 * GereDouble: manage if the player get a double with the dices
+	 */
+	public void GereDouble(Des des, Joueur joueur)
+	{
+		
+	}
+	
+	/**
+	 * Vendre: allow to the player to sell a property
+	 */
+	public void Vendre(Cases Case, Joueur joueur)
+	{
+		
+	}
+	
+	/**
+	 * EchangeBiens: allow to the player to exchange a property with an other player
+	 */
+	public void EchangeBiens(Joueur joueur)
+	{
+		
+	}
+	
 }

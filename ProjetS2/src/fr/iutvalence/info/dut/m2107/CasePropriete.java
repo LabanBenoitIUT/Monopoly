@@ -31,7 +31,7 @@ private String couleur;
 /**
  * Owner of the property 
  */
-private Joueur propriétaire;
+private Joueur proprietaire;
 
 /**
  * Used to get the value of the attribute hypotheque 
@@ -57,8 +57,9 @@ public String getCouleur()
 {
 	return couleur;
 }
-public Joueur getPropriétaire()
+public Joueur getProprietaire()
 {
-	return propriétaire;
+	return proprietaire;
 
+}
 }

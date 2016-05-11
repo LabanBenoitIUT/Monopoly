@@ -1,11 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 /**
  * represent a game
-<<<<<<< HEAD
  * @author Benoit Laban 
-=======
- * @author benoit laban
->>>>>>> branch 'master' of https://github.com/LabanBenoitIUT/Monopoly.git
  *
  */
 public class Partie

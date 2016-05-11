@@ -122,15 +122,13 @@ public class Joueur
 	{
 		this.position = (this.position + nbCase) % 40;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	/**
+	 * @param position the position to set
+	 */
+	public void setPosition(int position) {
+		this.position = position;
+	}
 	
 	
 

@@ -62,3 +62,4 @@ public Joueur getPropriétaire()
 	return propriétaire;
 
 }
+}

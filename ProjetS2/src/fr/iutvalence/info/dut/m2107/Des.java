@@ -40,12 +40,4 @@ public class Des
 			return false;
 		}
 
-	/**
-	 * Used to get the value of a dice
-	 * @return valeurDe
-	 */
-	public static int getValeurDe() {
-		return valeurDe;
-	}
-
 }

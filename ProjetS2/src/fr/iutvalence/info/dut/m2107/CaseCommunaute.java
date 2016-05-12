@@ -10,4 +10,5 @@ public class CaseCommunaute extends Cases
 		
 	}
 
+
 }

@@ -5,14 +5,20 @@ public class CaseTaxe extends Cases
 	/**
 	 * the cost of the box
 	 */
-	private int somme;
+	private final int somme;
 	
+	
+	
+	public CaseTaxe() {
+		this.somme = 100;
+	}
+
 	/**
 	 * get the amount of somme
 	 * @return the amount
 	 */
 	public int getSomme()
 	{
-		
+		return somme;
 	}
 }

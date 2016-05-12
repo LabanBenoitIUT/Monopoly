@@ -15,19 +15,4 @@ public class CaseChance extends Cases
 		
 	}
 
-	public String getType() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public String getTNom() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public int getPosition() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

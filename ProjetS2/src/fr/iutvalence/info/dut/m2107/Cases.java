@@ -6,7 +6,24 @@ public abstract class Cases
 	protected int position;
 	protected String nom;
 	
-	public abstract String getType();
-	public abstract String getTNom();
-	public abstract int getPosition();
+	/**
+	 * @return the type
+	 */
+	public String getType() {
+		return this.type;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getTNom() {
+		return this.nom;
+	}
+
+	/**
+	 * @return the position
+	 */
+	public int getPosition() {
+		return this.position;
+	}
 }

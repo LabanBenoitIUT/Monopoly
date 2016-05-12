@@ -5,15 +5,25 @@ public class CaseImpot extends Cases
 	/**
 	 * the cost of the box
 	 */
-	private int somme;
+	private final int somme;
 	
+	/**
+	 * @param somme
+	 */
+	public CaseImpot() {
+		super();
+		this.somme = 150 ;
+	}
+
+
+
 	/**
 	 * get the amount of somme
 	 * @return the amount
 	 */
 	public int getSomme()
 	{
-		
+		return somme;
 	}
 
 }

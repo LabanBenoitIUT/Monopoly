@@ -30,27 +30,6 @@ public class CaseAllerEnPrison extends Cases{
 	}
 	
 	/**
-	 * @return the type
-	 */
-	public String getType() {
-		return this.type;
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getTNom() {
-		return this.nom;
-	}
-
-	/**
-	 * @return the position
-	 */
-	public int getPosition() {
-		return this.position;
-	}
-	
-	/**
 	 * upgrade the position of the current player with the position of the prison
 	 * @param joueur the current player
 	 */

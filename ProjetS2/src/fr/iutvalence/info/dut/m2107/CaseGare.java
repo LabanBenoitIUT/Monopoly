@@ -1,6 +1,6 @@
 package fr.iutvalence.info.dut.m2107;
 
-public class CaseGare extends Cases 
+public class CaseGare extends CasePropriete 
 {
 	/**
 	 * amount of the rent

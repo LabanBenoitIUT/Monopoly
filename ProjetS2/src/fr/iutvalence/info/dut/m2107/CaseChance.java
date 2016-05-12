@@ -1,7 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 
 /**
- * 
+ * cases draw a lucky card
  * @author veyrea
  *
  */

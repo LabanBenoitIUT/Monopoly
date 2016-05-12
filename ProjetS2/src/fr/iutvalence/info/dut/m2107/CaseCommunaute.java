@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * cases draw a community card
+ * @author labanb
+ *
+ */
 public class CaseCommunaute extends Cases
 {
 	/**

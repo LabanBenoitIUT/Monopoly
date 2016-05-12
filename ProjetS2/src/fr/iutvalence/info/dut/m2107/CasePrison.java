@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * define the jail
+ * @author labanb
+ *
+ */
 public class CasePrison extends Cases 
 {
 	/**

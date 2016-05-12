@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * define a tax case
+ * @author labanb
+ *
+ */
 public class CaseTaxe extends Cases
 {
 	/**

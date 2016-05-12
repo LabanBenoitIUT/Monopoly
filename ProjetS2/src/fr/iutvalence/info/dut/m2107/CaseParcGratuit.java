@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * define the ParcGratruit 
+ * @author labanb
+ *
+ */
 public class CaseParcGratuit extends Cases 
 {
 	/**

@@ -15,8 +15,6 @@ public class CaseImpot extends Cases
 		this.somme = 150 ;
 	}
 
-
-
 	/**
 	 * get the amount of somme
 	 * @return the amount

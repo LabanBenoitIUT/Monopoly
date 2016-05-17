@@ -23,6 +23,17 @@ public class Partie
 	
 	/**
 	 * Play: create a Monopoly game
+	 * 
+	 * algo:
+	 * current player is player 1
+	 * while(game is not over)
+	 *  while round of current player is not over
+	 *   jet de des
+	 *   avance
+	 *   action de la case
+	 *   action du joueur( vendre, echanger,...)
+	 *  switch current player
+	 * game over
 	 */
 	public void Play()
 	{

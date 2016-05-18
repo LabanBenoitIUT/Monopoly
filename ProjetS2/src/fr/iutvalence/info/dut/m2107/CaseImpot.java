@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * case pay a tax
+ * @author labanb
+ *
+ */
 public class CaseImpot extends Cases
 {
 	/**

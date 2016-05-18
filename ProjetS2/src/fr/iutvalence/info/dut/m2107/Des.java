@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * define a dice
+ * @author Dylan Berard
+ *
+ */
 public class Des
 {	
 	/**

@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * cases company
+ * @author labanb
+ *
+ */
 public class CaseCompagnie extends CasePropriete 
 {
 	/**

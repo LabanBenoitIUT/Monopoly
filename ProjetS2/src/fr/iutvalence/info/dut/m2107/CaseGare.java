@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * define a case station
+ * @author labanb
+ *
+ */
 public class CaseGare extends CasePropriete 
 {
 	/**

@@ -2,7 +2,7 @@ package fr.iutvalence.info.dut.m2107;
 
 /**
  * define a player
- * @author Aurélien VEYRE
+ * @author Aurelien VEYRE
  *
  */
 public class Joueur

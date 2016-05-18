@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * abstract class of cases
+ * @author labanb
+ *
+ */
 public abstract class Cases 
 {
 	protected String type;

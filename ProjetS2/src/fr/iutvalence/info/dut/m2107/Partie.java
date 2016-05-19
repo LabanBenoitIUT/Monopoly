@@ -21,6 +21,24 @@ public class Partie
 	 */
 	private int IndiceJoueurCourant;
 	
+	Cases[][] board = new Cases[10][10];
+	
+	public Partie()
+	{
+		for(int ligne = 1; ligne < 9; ligne ++ )
+		{
+			for(int colonne = 1; colonne < 9; colonne ++ )
+			{
+				this.board[ligne][colonne]=null;
+			}
+		}
+		this.board[0][0]= new CaseDepart();
+		this.board[0][9]= new CasePrison();
+		this.board[9][9]= new CasePrison();
+		this.board[9][0]=null;
+		
+	}
+	
 	/**
 	 * Play: create a Monopoly game
 	 * 

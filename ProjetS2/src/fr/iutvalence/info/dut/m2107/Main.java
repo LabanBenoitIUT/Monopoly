@@ -1,4 +1,6 @@
 package fr.iutvalence.info.dut.m2107;
+import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
 
 /**
  * application who execute a Monopoly
@@ -15,7 +17,8 @@ public class Main
 	{
 		new Partie().Play();
 		System.out.println();
-		
+		JFrame fenetre = new JFrame();
+		fenetre.setVisible(true);
 	}
 
 }

@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * represent a building property
+ * @author Benoit Laban
+ *
+ */
 public class Constructible extends CasePropriete
 {
 /**
@@ -17,7 +21,7 @@ private int nbConstruction;
  */
 public int getPrixConstruction()
 {
-	return prixConstruction;
+	return this.prixConstruction;
 }
 /**
  * used to get the number of building cases
@@ -25,7 +29,7 @@ public int getPrixConstruction()
  */
 public int getNbConstruction()
 {
-	return nbConstruction;
+	return this.nbConstruction;
 }
 
 }

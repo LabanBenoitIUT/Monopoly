@@ -11,9 +11,13 @@ public class CaseCompagnie extends CasePropriete
 	 */
 	private int loyer;
 	
-	public CaseCompagnie() {
+	/**
+	 * 
+	 */
+	/*public CaseCompagnie() 
+	{
 		this.loyer = loyer;
-	}
+	}*/
 
 	/**
 	 * get the rent

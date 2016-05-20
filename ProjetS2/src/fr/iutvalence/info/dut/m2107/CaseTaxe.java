@@ -11,9 +11,11 @@ public class CaseTaxe extends Cases
 	 */
 	private final int somme;
 	
-	
-	
-	public CaseTaxe() {
+	/**
+	 * constructor of this class
+	 */
+	public CaseTaxe() 
+	{
 		this.somme = 100;
 	}
 
@@ -23,6 +25,6 @@ public class CaseTaxe extends Cases
 	 */
 	public int getSomme()
 	{
-		return somme;
+		return this.somme;
 	}
 }

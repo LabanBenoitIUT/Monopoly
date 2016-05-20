@@ -17,12 +17,12 @@ public class CaseParcGratuit extends Cases
 	 */
 	public int getSomme()
 	{
-		return somme;
+		return this.somme;
 	}
 	
 	/**
 	 * update the amount of money in the ParcGratuit
-	 * @param i : amount of money
+	 * @param somme the amount in the ParcGratuit
 	 */
 	public void setSomme(int somme)
 	{

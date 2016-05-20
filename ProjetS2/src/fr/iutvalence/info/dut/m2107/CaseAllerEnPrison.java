@@ -26,7 +26,7 @@ public class CaseAllerEnPrison extends Cases{
 	 * @return the destination
 	 */
 	public int getDestination() {
-		return destination;
+		return this.destination;
 	}
 	
 	/**

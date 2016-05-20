@@ -3,7 +3,7 @@ package fr.iutvalence.info.dut.m2107;
 public class Constructible extends CasePropriete
 {
 /**
- * the price of a building case
+ * the pric of a building case
  */
 private int prixConstruction;
 /***

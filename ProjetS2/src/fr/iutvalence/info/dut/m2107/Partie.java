@@ -100,16 +100,16 @@ public class Partie
 	 */
 	public int getIndiceJoueurCourant()
 	{
-		return IndiceJoueurCourant;
+		return this.IndiceJoueurCourant;
 	}
 	
 	/**
 	 * update the current player
-	 * @param indiceJoueurCourant
+	 * @param indiceJoueurCourant number of the player
 	 */
 	public void setIndiceJoueurCourant(int indiceJoueurCourant)
 	{
-		IndiceJoueurCourant = indiceJoueurCourant;
+		this.IndiceJoueurCourant = indiceJoueurCourant;
 	}
 	
 	/**

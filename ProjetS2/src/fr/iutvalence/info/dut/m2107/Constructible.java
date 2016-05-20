@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
 
+/**
+ * @author canseva
+ *Building case of a Monopoly Game
+ */
 public class Constructible extends CasePropriete
 {
 /**

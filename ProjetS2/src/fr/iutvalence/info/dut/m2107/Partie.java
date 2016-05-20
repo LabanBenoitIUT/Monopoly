@@ -6,6 +6,9 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class Partie
 {
+	
+	private Joueur joueur;
+	
 	/**
 	 * NbJoueurs: number of players in the game
 	 */
@@ -91,7 +94,23 @@ public class Partie
 	 */
 	public void Play()
 	{
-		
+		int De1;
+		int De2;
+		boolean gameover = false;
+		boolean endOfRound = false;
+		this.IndiceJoueurCourant = 1; 
+		this.joueur.position=CaseDepart;
+		while(gameover==false)
+		{
+			while(endOfRound==false)
+			{
+				De1=Des.lancerDe();
+				De2=Des.lancerDe();
+				this.joueur.deplace(De1+De2);
+				
+			}
+			
+		}
 	}
 	
 	/**

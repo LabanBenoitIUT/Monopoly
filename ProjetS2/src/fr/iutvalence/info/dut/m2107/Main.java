@@ -20,5 +20,5 @@ public class Main
 		JFrame fenetre = new JFrame();
 		fenetre.setVisible(true);
 	}
-
-}
+	
+	

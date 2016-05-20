@@ -25,7 +25,7 @@ public class Partie
 	
 	public Partie()
 	{
-		// initialisation of every case of the board
+		// Initialization of every case of the board
 		for(int ligne = 1; ligne < 10; ligne ++ )
 		{
 			for(int colonne = 1; colonne < 10; colonne ++ )
@@ -34,45 +34,45 @@ public class Partie
 			}
 		}
 		this.board[0][0]= new CaseDepart();
-	//	this.board[0][1]= new CaseConstructible();
+		this.board[0][1]= new Constructible();
 		this.board[0][2]= new CaseCommunaute();
-	//	this.board[0][3]= new CaseConstructible();
+		this.board[0][3]= new Constructible();
 		this.board[0][4]= new CaseImpot();
 		this.board[0][5]= new CaseGare();
-	//	this.board[0][6]= new CaseConstructible();
+		this.board[0][6]= new Constructible();
 		this.board[0][7]= new CaseChance();
-	//	this.board[0][8]= new CaseConstructible();
-	//	this.board[0][9]= new CaseConstructible();
+		this.board[0][8]= new Constructible();
+		this.board[0][9]= new Constructible();
 		this.board[0][10]= new CasePrison();
-	//	this.board[1][0]= new CaseConstructible();
-	//	this.board[1][9]= new CaseConstructible();
+		this.board[1][0]= new Constructible();
+		this.board[1][9]= new Constructible();
 		this.board[2][0]= new CaseTaxe();
 		this.board[2][9]= new CaseCompagnie();
-	//	this.board[3][0]= new CaseConstructible();
-	//	this.board[3][9]= new CaseConstructible();
+		this.board[3][0]= new Constructible();
+		this.board[3][9]= new Constructible();
 		this.board[4][0]= new CaseChance();
-	//	this.board[4][9]= new CaseConstructible();
+		this.board[4][9]= new Constructible();
 		this.board[5][0]= new CaseGare();
 		this.board[5][9]= new CaseGare();
-	//	this.board[6][0]= new CaseConstructible();
-	//	this.board[6][9]= new CaseConstructible();
+		this.board[6][0]= new Constructible();
+		this.board[6][9]= new Constructible();
 		this.board[7][0]= new CaseCommunaute();
 		this.board[7][9]= new CaseCommunaute();
-	//	this.board[8][0]= new CaseConstructible();
-	//	this.board[8][9]= new CaseConstructible();
-	//	this.board[9][0]= new CaseConstructible();
-	//	this.board[9][9]= new CaseConstructible();
+		this.board[8][0]= new Constructible();
+		this.board[8][9]= new Constructible();
+		this.board[9][0]= new Constructible();
+		this.board[9][9]= new Constructible();
 		this.board[10][0]= new CaseAllerEnPrison();
 		this.board[10][9]= new CaseParcGratuit();
-	//	this.board[10][1]= new CaseConstructible();
+		this.board[10][1]= new Constructible();
 		this.board[10][2]= new CaseCompagnie();
-	//	this.board[10][3]= new CaseConstructible();
-	//	this.board[10][4]= new CaseConstructible();
+		this.board[10][3]= new Constructible();
+		this.board[10][4]= new Constructible();
 		this.board[10][5]= new CaseGare();
-	//	this.board[10][6]= new CaseConstructible();
-	//	this.board[10][7]= new CaseConstructible();
+		this.board[10][6]= new Constructible();
+		this.board[10][7]= new Constructible();
 		this.board[10][8]= new CaseChance();
-	//	this.board[10][9]= new CaseConstructible();		
+		this.board[10][9]= new Constructible();	
 	}
 	
 	/**

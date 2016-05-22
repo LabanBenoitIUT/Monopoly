@@ -3,9 +3,6 @@
  */
 package fr.iutvalence.info.dut.m2107;
 
-import EmptyQueueException;
-import FullQueueException;
-import Message;
 
 /**
  * @author aurélien
@@ -40,9 +37,10 @@ public class Pioche
 	/**
 	 * Add a message to queue (at the end)
 	 * @param message the message to add
+	 * @throws FullPiocheException 
 	 * @throws FullQueueException when message can not be added because queue was full
 	 */
-	public void put(Cartes carte)
+	public void put(Cartes carte) throws FullPiocheException
 	{
 		if (this.size == this.DEFAULT_CAPACITY) throw new FullPiocheException();
 		
@@ -60,14 +58,16 @@ public class Pioche
 		if (this.size < 0) throw new EmptyPiocheException();
 		Cartes carte = this.pioche[this.size];
 		if (carte.type != "Sortir de prison")
-			ActiveCarte();
-			// a déplacer dans ActiveCarte 
+			//To Do : ActiveCarte();
+			
+			// a déplacer dans ActiveCarte :
 			//for (int CarteIndex=this.size - 1; CarteIndex < 1; CarteIndex--)
 			//this.pioche[CarteIndex] = this.pioche[CarteIndex + 1];
 			//this.pioche[0]= carte;
 			//this.size ++ ;
-		else 
-			return carte;
-	}
+	//	else 
+		return carte;
+		return carte;
+		}
 }
 

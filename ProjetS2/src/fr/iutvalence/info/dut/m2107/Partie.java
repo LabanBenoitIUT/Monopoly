@@ -1,6 +1,5 @@
 package fr.iutvalence.info.dut.m2107;
 
-import javax.swing.JPanel;
 
 /**
  * represent a game
@@ -24,10 +23,13 @@ public class Partie
 	 */
 	private int IndiceJoueurCourant;
 	
-	Cases[][] board;
+	//Cases[][] board;
+	
+	ListeChainee board;
 	
 	public Partie()
 	{
+		/* façon tableau
 		this.board =  new Cases[11][11];
 		// Initialization of every case of the board
 		for(int ligne = 1; ligne < 10; ligne ++ )
@@ -76,7 +78,49 @@ public class Partie
 		this.board[10][6]= new Constructible();
 		this.board[10][7]= new Constructible();
 		this.board[10][8]= new CaseChance();
-		this.board[10][9]= new Constructible();	
+		this.board[10][9]= new Constructible();	*/
+		
+		 façon liste chainee
+		 this.board = new ListeChainee(new CaseDepart());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCommunaute());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseImpot());
+		 this.board = new ListeChainee(new CaseGare());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseChance());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CasePrison());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCompagnie());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseGare());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCommunaute());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseParcGratuit());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseChance());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseGare());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCompagnie());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseAllerEnPrison());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCommunaute());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseGare());
+		 this.board = new ListeChainee(new CaseChance());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseTaxe());
+		 this.board = new ListeChainee(new Constructible());
 	}
 	
 	/**

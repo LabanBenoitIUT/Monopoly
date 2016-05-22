@@ -49,10 +49,6 @@ public abstract class Cartes{
 		return valeur;
 	}
 
-	public void piocherCarte()
-	{
-		
-	}
 }
 
 

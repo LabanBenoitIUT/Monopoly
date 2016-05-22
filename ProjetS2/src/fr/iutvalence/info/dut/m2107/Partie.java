@@ -1,4 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
+
+import javax.swing.JPanel;
+
 /**
  * represent a game
  * @author Benoit Laban 
@@ -21,10 +24,11 @@ public class Partie
 	 */
 	private int IndiceJoueurCourant;
 	
-	Cases[][] board = new Cases[11][11];
+	Cases[][] board;
 	
 	public Partie()
 	{
+		this.board =  new Cases[11][11];
 		// Initialization of every case of the board
 		for(int ligne = 1; ligne < 10; ligne ++ )
 		{

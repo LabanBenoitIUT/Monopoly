@@ -80,7 +80,7 @@ public class Partie
 		this.board[10][8]= new CaseChance();
 		this.board[10][9]= new Constructible();	*/
 		
-		 façon liste chainee
+		// façon liste chainee
 		 this.board = new ListeChainee(new CaseDepart());
 		 this.board = new ListeChainee(new Constructible());
 		 this.board = new ListeChainee(new CaseCommunaute());

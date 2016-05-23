@@ -48,7 +48,6 @@ public abstract class Cartes{
 	{
 		return valeur;
 	}
-
 }
 
 

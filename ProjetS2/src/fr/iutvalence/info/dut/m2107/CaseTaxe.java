@@ -10,9 +10,7 @@ public class CaseTaxe extends Cases
 	 * the cost of the box
 	 */
 	private final int somme;
-	
-	
-	
+
 	public CaseTaxe() {
 		this.somme = 100;
 	}

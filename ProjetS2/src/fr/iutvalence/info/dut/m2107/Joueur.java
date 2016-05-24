@@ -48,22 +48,53 @@ public class Joueur
 	 * check if the player is in prison:
 	 */
 	private boolean enPrison;
-
-	public int getNbDouble() 
+	
+	/**
+	 * constructor of the player
+	 */
+	public Joueur(String name)
 	{
-		return nbDouble;
+		this.name =  name;
+		this.argentSurLeCompte = 3000;
+		this.enPrison = false;
+		this.estDansLaPartie = true;
+		this.nbCarteSortiePrison = 0;
+		this.nbDouble = 0;
+		this.position = 0;
+		this.nbTourPrison = 0;
 	}
 
+	/**
+	 * get the number of double
+	 * @return number of double
+	 */
+	public int getNbDouble() 
+	{
+		return this.nbDouble;
+	}
+
+	/**
+	 * update the number of double of the player
+	 * @param nbDouble : number of double
+	 */
 	public void setNbDouble(int nbDouble) 
 	{
 		this.nbDouble = nbDouble;
 	}
 
+	/**
+	 * get the number of card to exit from jail
+	 * @return number of card to exit from jail
+	 */
 	public int getNbCarteSortiePrison() 
 	{
-		return nbCarteSortiePrison;
+		return this.nbCarteSortiePrison;
 	}
 
+	/**
+	 * update the number of card to exit from jail
+	 * @param nbCarteSortiePrison number of card to exit from jail
+	 */
 	public void setNbCarteSortiePrison(int nbCarteSortiePrison) 
 	{
 		this.nbCarteSortiePrison = nbCarteSortiePrison;
@@ -75,7 +106,7 @@ public class Joueur
 	 */
 	public String getName()
 	{
-		return name;
+		return this.name;
 	}
 
 	/**
@@ -84,7 +115,7 @@ public class Joueur
 	 */
 	public int getNbTourPrison() 
 	{
-		return nbTourPrison;
+		return this.nbTourPrison;
 	}
 
 	/**
@@ -93,7 +124,7 @@ public class Joueur
 	 */
 	public int getArgentSurLeCompte() 
 	{
-		return argentSurLeCompte;
+		return this.argentSurLeCompte;
 	}
 
 	/**
@@ -102,12 +133,12 @@ public class Joueur
 	 */
 	public boolean isEnPrison() 
 	{
-		return enPrison;
+		return this.enPrison;
 	}
 	
 	/**
 	 * change the amount of the account
-	 * @param somme
+	 * @param somme amount of the account
 	 */
 	public void changeSolde(int somme )
 	{
@@ -116,7 +147,7 @@ public class Joueur
 	
 	/**
 	 * change the position of the player
-	 * @param nbCase
+	 * @param nbCase : number of case 
 	 */
 	public void deplace(int nbCase)
 	{

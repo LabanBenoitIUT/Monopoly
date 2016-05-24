@@ -11,13 +11,21 @@ public class CaseGare extends CasePropriete
 	 */
 	private int loyer;
 	
+	public CaseGare(int position, String nom)
+	{
+		this.type = "Gare";
+		this.position = position;
+		this.nom = nom;
+		this.loyer = loyer;
+	}
+
 	/**
 	 * get the rent
 	 * @return the cost of the rent
 	 */
 	public int getLoyer()
 	{
-		return loyer;
+		return this.loyer;
 	}
 	
 }

@@ -1,7 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 /**
  * case pay a tax
- * @author labanb
+ * @author Benoit Laban
  *
  */
 public class CaseImpot extends Cases
@@ -12,20 +12,22 @@ public class CaseImpot extends Cases
 	private final int somme;
 	
 	/**
-	 * @param somme
+	 * constructor of the case CaseImpot
 	 */
 	public CaseImpot() {
-		super();
+		this.type = "impot";
+		this.position = 4;
+		this.nom = "impot";
 		this.somme = 150 ;
 	}
 
 	/**
-	 * get the amount of somme
+	 * get the amount of tax
 	 * @return the amount
 	 */
 	public int getSomme()
 	{
-		return somme;
+		return this.somme;
 	}
 
 }

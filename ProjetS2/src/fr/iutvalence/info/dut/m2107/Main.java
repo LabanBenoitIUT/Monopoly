@@ -11,14 +11,13 @@ public class Main
 {
 	/**
 	 * begin the game
-	 * @param args
+	 * @param args .
 	 */
 	public static void main(String[] args)
 	{
+		IHM fenetre = new IHM();
 		new Partie().Play();
 		System.out.println();
-		JFrame fenetre = new JFrame();
-		fenetre.setVisible(true);
 	}
-	
-	
+}
+

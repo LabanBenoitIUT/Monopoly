@@ -4,7 +4,7 @@ package fr.iutvalence.info.dut.m2107;
  * @author canseva
  *
  */
-public class CasePropriete extends Cases
+public abstract class CasePropriete extends Cases
 {
 
 		
@@ -39,7 +39,7 @@ public class CasePropriete extends Cases
 	 */
 	public boolean isHypotheque()
 	{
-		return hypotheque;
+		return this.hypotheque;
 	}
 	/**
 	 * used to get the value of the attribute valeur achat
@@ -47,7 +47,7 @@ public class CasePropriete extends Cases
 	 */
 	public int getValeurAchat()
 	{
-		return valeurAchat;
+		return this.valeurAchat;
 	}
 	/**
 	 * used to get the mortgage value
@@ -55,7 +55,7 @@ public class CasePropriete extends Cases
 	 */
 	public int getValeurHypotheque()
 	{
-		return valeurHypotheque;
+		return this.valeurHypotheque;
 	}
 	/**
 	 * used to get the number of property that have the same color
@@ -63,7 +63,7 @@ public class CasePropriete extends Cases
 	 */
 	public int getNbProprieteMemeCouleur()
 	{
-		return nbProprieteMemeCouleur;
+		return this.nbProprieteMemeCouleur;
 	}
 	/**
 	 * used to get the color of a property
@@ -71,7 +71,7 @@ public class CasePropriete extends Cases
 	 */
 	public String getCouleur()
 	{
-		return couleur;
+		return this.couleur;
 	}
 	/**
 	 * used to get the owner of a property
@@ -79,7 +79,7 @@ public class CasePropriete extends Cases
 	 */
 	public Joueur getProprietaire()
 	{
-		return proprietaire;
+		return this.proprietaire;
 	
 	}
 }

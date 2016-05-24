@@ -28,7 +28,7 @@ public abstract class Cartes{
 	
 	public String getType()
 	{
-		return type;
+		return this.type;
 	}
 	
 	/**
@@ -37,7 +37,7 @@ public abstract class Cartes{
 	 */
 	public String getTexte()
 	{
-		return texte;
+		return this.texte;
 	}
 	
 	/**
@@ -46,13 +46,17 @@ public abstract class Cartes{
 	 */
 	public int getValeur()
 	{
-		return valeur;
+		return this.valeur;
 	}
-
+	
+	/**
+	 * draw a card
+	 */
 	public void piocherCarte()
 	{
 		
 	}
+
 }
 
 

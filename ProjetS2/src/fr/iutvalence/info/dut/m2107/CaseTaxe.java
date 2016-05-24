@@ -11,9 +11,13 @@ public class CaseTaxe extends Cases
 	 */
 	private final int somme;
 	
-	
-	
+	/**
+	 * constructor of this class
+	 */
 	public CaseTaxe() {
+		this.nom ="Taxe de luxe";
+		this.position = 38;
+		this.type  = "Taxe";
 		this.somme = 100;
 	}
 
@@ -23,6 +27,6 @@ public class CaseTaxe extends Cases
 	 */
 	public int getSomme()
 	{
-		return somme;
+		return this.somme;
 	}
 }

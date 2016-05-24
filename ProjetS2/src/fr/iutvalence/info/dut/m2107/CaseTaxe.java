@@ -14,8 +14,10 @@ public class CaseTaxe extends Cases
 	/**
 	 * constructor of this class
 	 */
-	public CaseTaxe() 
-	{
+	public CaseTaxe() {
+		this.nom ="Taxe de luxe";
+		this.position = 38;
+		this.type  = "Taxe";
 		this.somme = 100;
 	}
 

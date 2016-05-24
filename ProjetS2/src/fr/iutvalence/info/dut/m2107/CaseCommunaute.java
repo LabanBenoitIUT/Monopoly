@@ -6,6 +6,12 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class CaseCommunaute extends Cases
 {
+	public CaseCommunaute(int position)
+	{
+		this.type = "Caisse de communaute";
+		this.position = position;
+		this.nom = "Caisse de communaute";
+	}
 	/**
 	 * tirerCarte: draw a card
 	 */

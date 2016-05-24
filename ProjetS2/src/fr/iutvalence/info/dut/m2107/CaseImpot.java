@@ -15,7 +15,9 @@ public class CaseImpot extends Cases
 	 * constructor of the case CaseImpot
 	 */
 	public CaseImpot() {
-		super();
+		this.type = "impot";
+		this.position = 4;
+		this.nom = "impot";
 		this.somme = 150 ;
 	}
 

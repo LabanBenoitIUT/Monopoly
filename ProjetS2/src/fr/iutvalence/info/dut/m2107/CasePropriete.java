@@ -4,7 +4,7 @@ package fr.iutvalence.info.dut.m2107;
  * @author canseva
  *
  */
-public class CasePropriete extends Cases
+public abstract class CasePropriete extends Cases
 {
 
 		

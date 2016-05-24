@@ -11,6 +11,13 @@ public class CaseParcGratuit extends Cases
 	 */
 	private int somme;
 	
+	public CaseParcGratuit()
+	{
+		this.type = "Parc Gratuit";
+		this.position = 20;
+		this.nom = "Parc Gratuit";
+		this.somme = 0;
+	}
 	/**
 	 * get the amount in the ParcGratuit
 	 * @return somme

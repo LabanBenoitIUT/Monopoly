@@ -94,12 +94,12 @@ public class Partie
 	 */
 	public void Play()
 	{
+		Joueur joueur1 = new joueur(j1);
 		int De1;
 		int De2;
 		boolean gameover = false;
 		boolean endOfRound = false;
 		this.IndiceJoueurCourant = 1; 
-		this.joueur.position=CaseDepart;
 		while(gameover==false)
 		{
 			while(endOfRound==false)
@@ -107,6 +107,7 @@ public class Partie
 				De1=Des.lancerDe();
 				De2=Des.lancerDe();
 				this.joueur.deplace(De1+De2);
+				Cases.getType();
 				
 			}
 			

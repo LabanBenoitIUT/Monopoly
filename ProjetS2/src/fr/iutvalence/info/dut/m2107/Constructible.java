@@ -1,5 +1,9 @@
 package fr.iutvalence.info.dut.m2107;
-
+/**
+ * represent a building property
+ * @author Benoit Laban
+ *
+ */
 public class Constructible extends CasePropriete
 {
 	
@@ -37,5 +41,6 @@ public class Constructible extends CasePropriete
 	{
 		return nbConstruction;
 	}
+
 
 }

@@ -16,9 +16,9 @@ public class CasePrison extends Cases
 	 * getPrisonniers: get the name of the prisoners 
 	 * @return the name of prisoners 
 	 */
-	//public Joueur getPrisonniers()
+	/*public Joueur getPrisonniers()
 	{
 		
-	}
+	}*/
 
 }

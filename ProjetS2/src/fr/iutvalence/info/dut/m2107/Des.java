@@ -28,10 +28,9 @@ public class Des
 	
 	/**
 	 * Used to compare the values of two dices
-	 * @param de1
-	 * @param de2
-	 * @return false if de1 != de2
-	 * @return true if de1=de2
+	 * @param de1 the first dice
+	 * @param de2 the second dice
+	 * @return false if de1 != de2 ; true if de1=de2
 	 */
 	public static boolean isDouble(int de1, int de2){
 		

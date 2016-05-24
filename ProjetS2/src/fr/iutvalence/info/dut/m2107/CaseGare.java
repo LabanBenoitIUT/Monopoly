@@ -25,7 +25,7 @@ public class CaseGare extends CasePropriete
 	 */
 	public int getLoyer()
 	{
-		return loyer;
+		return this.loyer;
 	}
 	
 }

@@ -12,6 +12,9 @@ public class CaseTaxe extends Cases
 	private final int somme;
 
 	public CaseTaxe() {
+		this.nom ="Taxe de luxe";
+		this.position = 38;
+		this.type  = "Taxe";
 		this.somme = 100;
 	}
 

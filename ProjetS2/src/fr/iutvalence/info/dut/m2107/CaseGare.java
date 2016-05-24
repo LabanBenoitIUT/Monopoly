@@ -16,7 +16,7 @@ public class CaseGare extends CasePropriete
 		this.type = "Gare";
 		this.position = position;
 		this.nom = nom;
-		this.loyer = loyer;
+		this.loyer = 50;
 	}
 
 	/**

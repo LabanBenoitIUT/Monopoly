@@ -16,10 +16,10 @@ public class CaseCompagnie extends CasePropriete
 	 * 
 	 */
 	public CaseCompagnie(int position, String nom) {
-		this.type = "Commagnie";
+		this.type = "Compagnie";
 		this.position = position;
 		this.nom = nom;
-		this.loyer = loyer;
+		this.loyer = 50;
 	}
 
 	/**

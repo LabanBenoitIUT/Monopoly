@@ -63,7 +63,7 @@ public class Des
 	
 	/**
 	 * getter for the value of the first dice
-	 * @return int ValeurDes1
+	 * @return int ValeurDess
 	 */
 	public int getValeurDes1() {
 		return ValeurDes1;

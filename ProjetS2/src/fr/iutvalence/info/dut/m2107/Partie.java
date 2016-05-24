@@ -8,6 +8,9 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class Partie
 {
+	
+	private Joueur joueur;
+	
 	/**
 	 * NbJoueurs: number of players in the game
 	 */
@@ -22,110 +25,11 @@ public class Partie
 	 * IndiceJoueurCourant: login of the current player
 	 */
 	private int IndiceJoueurCourant;
-	
-	//Cases[][] board;
-	
-	//ListeChainee board;
-	
+		
 	Cases[] board;
 	
 	public Partie()
 	{
-		/* façon tableau
-		this.board =  new Cases[11][11];
-		// Initialization of every case of the board
-		for(int ligne = 1; ligne < 10; ligne ++ )
-		{
-			for(int colonne = 1; colonne < 10; colonne ++ )
-			{
-				this.board[ligne][colonne]=null;
-			}
-		}
-		this.board[0][0]= new CaseDepart();
-		this.board[0][1]= new Constructible();
-		this.board[0][2]= new CaseCommunaute();
-		this.board[0][3]= new Constructible();
-		this.board[0][4]= new CaseImpot();
-		this.board[0][5]= new CaseGare();
-		this.board[0][6]= new Constructible();
-		this.board[0][7]= new CaseChance();
-		this.board[0][8]= new Constructible();
-		this.board[0][9]= new Constructible();
-		this.board[0][10]= new CasePrison();
-		this.board[1][0]= new Constructible();
-		this.board[1][9]= new Constructible();
-		this.board[2][0]= new CaseTaxe();
-		this.board[2][9]= new CaseCompagnie();
-		this.board[3][0]= new Constructible();
-		this.board[3][9]= new Constructible();
-		this.board[4][0]= new CaseChance();
-		this.board[4][9]= new Constructible();
-		this.board[5][0]= new CaseGare();
-		this.board[5][9]= new CaseGare();
-		this.board[6][0]= new Constructible();
-		this.board[6][9]= new Constructible();
-		this.board[7][0]= new CaseCommunaute();
-		this.board[7][9]= new CaseCommunaute();
-		this.board[8][0]= new Constructible();
-		this.board[8][9]= new Constructible();
-		this.board[9][0]= new Constructible();
-		this.board[9][9]= new Constructible();
-		this.board[10][0]= new CaseAllerEnPrison();
-		this.board[10][9]= new CaseParcGratuit();
-		this.board[10][1]= new Constructible();
-		this.board[10][2]= new CaseCompagnie();
-		this.board[10][3]= new Constructible();
-		this.board[10][4]= new Constructible();
-		this.board[10][5]= new CaseGare();
-		this.board[10][6]= new Constructible();
-		this.board[10][7]= new Constructible();
-		this.board[10][8]= new CaseChance();
-		this.board[10][9]= new Constructible();	
-		
-		// façon liste chainee
-		 this.board = new ListeChainee(new CaseDepart());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseCommunaute());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseImpot());
-		 this.board = new ListeChainee(new CaseGare());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseChance());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CasePrison());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseCompagnie());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseGare());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseCommunaute());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseParcGratuit());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseChance());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseGare());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseCompagnie());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseAllerEnPrison());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseCommunaute());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseGare());
-		 this.board = new ListeChainee(new CaseChance());
-		 this.board = new ListeChainee(new Constructible());
-		 this.board = new ListeChainee(new CaseTaxe());
-		 this.board = new ListeChainee(new Constructible());*/
-		
-		//tableau  simple entre
-		
 		this.board =  new Cases[39];
 		this.board[0]= new CaseDepart();
 		this.board[1]= new Constructible("Boulevard de belleville", 1, 200);
@@ -185,7 +89,24 @@ public class Partie
 	 */
 	public void Play()
 	{
-		
+		Joueur joueur1 = new joueur(j1);
+		int De1;
+		int De2;
+		boolean gameover = false;
+		boolean endOfRound = false;
+		this.IndiceJoueurCourant = 1; 
+		while(gameover==false)
+		{
+			while(endOfRound==false)
+			{
+				De1=Des.lancerDe();
+				De2=Des.lancerDe();
+				this.joueur.deplace(De1+De2);
+				Cases.getType();
+				
+			}
+			
+		}
 	}
 	
 	/**

@@ -6,8 +6,19 @@ package fr.iutvalence.info.dut.m2107;
  */
 public abstract class Cases 
 {
+	/**
+	 * type of case
+	 */
 	protected String type;
+	
+	/**
+	 * position in the board
+	 */
 	protected int position;
+	
+	/**
+	 * name of this case
+	 */
 	protected String nom;
 	
 	/**

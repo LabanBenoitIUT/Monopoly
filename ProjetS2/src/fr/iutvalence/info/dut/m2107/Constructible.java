@@ -1,5 +1,15 @@
 package fr.iutvalence.info.dut.m2107;
 
+/**
+ * @author canseva
+ *Building case of a Monopoly Game
+=======
+/**
+ * represent a building property
+ * @author Benoit Laban
+ *
+>>>>>>> branch 'master' of https://github.com/LabanBenoitIUT/Monopoly.git
+ */
 public class Constructible extends CasePropriete
 {
 	
@@ -37,5 +47,6 @@ public class Constructible extends CasePropriete
 	{
 		return nbConstruction;
 	}
+
 
 }

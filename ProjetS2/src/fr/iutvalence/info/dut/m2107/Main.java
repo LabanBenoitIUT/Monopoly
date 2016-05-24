@@ -1,4 +1,6 @@
 package fr.iutvalence.info.dut.m2107;
+import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
 
 /**
  * application who execute a Monopoly
@@ -9,12 +11,13 @@ public class Main
 {
 	/**
 	 * begin the game
-	 * @param args
+	 * @param args .
 	 */
 	public static void main(String[] args)
 	{
 		IHM fenetre = new IHM();
 		new Partie().Play();
-	 }
-
+		System.out.println();
+	}
 }
+

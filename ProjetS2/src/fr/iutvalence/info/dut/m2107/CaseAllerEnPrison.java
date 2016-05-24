@@ -1,4 +1,4 @@
-package fr.iutvalence.info.dut.m2107;
+ package fr.iutvalence.info.dut.m2107;
 
 /**
  * cases go to prison of the monopoly game
@@ -16,9 +16,9 @@ public class CaseAllerEnPrison extends Cases{
 	 * create the case AllerEnPrison
 	 */
 	public CaseAllerEnPrison(){
-		this.type = "aller en prison";
+		this.type = "Aller en prison";
 		this.position = 30;
-		this.nom = "aller en prison";
+		this.nom = "Aller en prison";
 		this.destination = 10;
 	}
 	
@@ -36,8 +36,4 @@ public class CaseAllerEnPrison extends Cases{
 	public void goToPrison(Joueur joueur){
 		joueur.setPosition(getPosition());
 	}
-	
-	
-	
-
 }

@@ -8,10 +8,15 @@ public class CaseDepart extends Cases
 {
 	private static int SOMME = 200;
 
+
 	public static int getSOMME() {
 		return SOMME;
 	}
 	
-	
-
+	public CaseDepart()
+	{
+		this.type = "Depart";
+		this.position = 0;
+		this.nom = "Depart";
+	}
 }

@@ -1,4 +1,6 @@
 package fr.iutvalence.info.dut.m2107;
+
+
 /**
  * represent a game
  * @author Benoit Laban 
@@ -21,11 +23,17 @@ public class Partie
 	 */
 	private int IndiceJoueurCourant;
 	
-	Cases[][] board = new Cases[11][11];
+	//Cases[][] board;
+	
+	//ListeChainee board;
+	
+	Cases[] board;
 	
 	public Partie()
 	{
-		// initialisation of every case of the board
+		/* façon tableau
+		this.board =  new Cases[11][11];
+		// Initialization of every case of the board
 		for(int ligne = 1; ligne < 10; ligne ++ )
 		{
 			for(int colonne = 1; colonne < 10; colonne ++ )
@@ -34,45 +42,131 @@ public class Partie
 			}
 		}
 		this.board[0][0]= new CaseDepart();
-	//	this.board[0][1]= new CaseConstructible();
+		this.board[0][1]= new Constructible();
 		this.board[0][2]= new CaseCommunaute();
-	//	this.board[0][3]= new CaseConstructible();
+		this.board[0][3]= new Constructible();
 		this.board[0][4]= new CaseImpot();
 		this.board[0][5]= new CaseGare();
-	//	this.board[0][6]= new CaseConstructible();
+		this.board[0][6]= new Constructible();
 		this.board[0][7]= new CaseChance();
-	//	this.board[0][8]= new CaseConstructible();
-	//	this.board[0][9]= new CaseConstructible();
+		this.board[0][8]= new Constructible();
+		this.board[0][9]= new Constructible();
 		this.board[0][10]= new CasePrison();
-	//	this.board[1][0]= new CaseConstructible();
-	//	this.board[1][9]= new CaseConstructible();
+		this.board[1][0]= new Constructible();
+		this.board[1][9]= new Constructible();
 		this.board[2][0]= new CaseTaxe();
 		this.board[2][9]= new CaseCompagnie();
-	//	this.board[3][0]= new CaseConstructible();
-	//	this.board[3][9]= new CaseConstructible();
+		this.board[3][0]= new Constructible();
+		this.board[3][9]= new Constructible();
 		this.board[4][0]= new CaseChance();
-	//	this.board[4][9]= new CaseConstructible();
+		this.board[4][9]= new Constructible();
 		this.board[5][0]= new CaseGare();
 		this.board[5][9]= new CaseGare();
-	//	this.board[6][0]= new CaseConstructible();
-	//	this.board[6][9]= new CaseConstructible();
+		this.board[6][0]= new Constructible();
+		this.board[6][9]= new Constructible();
 		this.board[7][0]= new CaseCommunaute();
 		this.board[7][9]= new CaseCommunaute();
-	//	this.board[8][0]= new CaseConstructible();
-	//	this.board[8][9]= new CaseConstructible();
-	//	this.board[9][0]= new CaseConstructible();
-	//	this.board[9][9]= new CaseConstructible();
+		this.board[8][0]= new Constructible();
+		this.board[8][9]= new Constructible();
+		this.board[9][0]= new Constructible();
+		this.board[9][9]= new Constructible();
 		this.board[10][0]= new CaseAllerEnPrison();
 		this.board[10][9]= new CaseParcGratuit();
-	//	this.board[10][1]= new CaseConstructible();
+		this.board[10][1]= new Constructible();
 		this.board[10][2]= new CaseCompagnie();
-	//	this.board[10][3]= new CaseConstructible();
-	//	this.board[10][4]= new CaseConstructible();
+		this.board[10][3]= new Constructible();
+		this.board[10][4]= new Constructible();
 		this.board[10][5]= new CaseGare();
-	//	this.board[10][6]= new CaseConstructible();
-	//	this.board[10][7]= new CaseConstructible();
+		this.board[10][6]= new Constructible();
+		this.board[10][7]= new Constructible();
 		this.board[10][8]= new CaseChance();
-	//	this.board[10][9]= new CaseConstructible();		
+		this.board[10][9]= new Constructible();	
+		
+		// façon liste chainee
+		 this.board = new ListeChainee(new CaseDepart());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCommunaute());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseImpot());
+		 this.board = new ListeChainee(new CaseGare());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseChance());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CasePrison());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCompagnie());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseGare());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCommunaute());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseParcGratuit());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseChance());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseGare());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCompagnie());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseAllerEnPrison());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseCommunaute());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseGare());
+		 this.board = new ListeChainee(new CaseChance());
+		 this.board = new ListeChainee(new Constructible());
+		 this.board = new ListeChainee(new CaseTaxe());
+		 this.board = new ListeChainee(new Constructible());*/
+		
+		//tableau  simple entre
+		
+		this.board =  new Cases[39];
+		this.board[0]= new CaseDepart();
+		this.board[1]= new Constructible("Boulevard de belleville", 1, 200);
+		this.board[2]= new CaseCommunaute(2);
+		this.board[3]= new Constructible("Boulevard de villette", 3, 200);
+		this.board[4]= new CaseImpot();
+		this.board[5]= new CaseGare(5, " Gare Montparnasse");
+		this.board[6]= new Constructible("rue la fayette", 6, 200);
+		this.board[7]= new CaseChance(7);
+		this.board[8]= new Constructible("avenue de la republique", 8, 200);
+		this.board[9]= new Constructible("rue de paradis", 9, 200);
+		this.board[10]= new CasePrison();
+		this.board[11]= new Constructible("Place de la bourse", 11, 200);
+		this.board[12]= new CaseCompagnie(12,"compagnie de distribution d'electricite");
+		this.board[13]= new Constructible("rue machin", 13, 200);
+		this.board[14]= new Constructible("avenue de neuilly", 14, 200);
+		this.board[15]= new CaseGare(15, "Gare de Lyon");
+		this.board[16]= new Constructible("Place Pigalle", 16, 200);
+		this.board[17]= new CaseCommunaute(17);
+		this.board[18]= new Constructible("Avenue mozart", 18, 200);
+		this.board[19]= new Constructible("Rue de ????", 19, 200);
+		this.board[20]= new CaseParcGratuit();
+		this.board[21]= new Constructible("???", 21, 200);
+		this.board[22]= new CaseChance(22);
+		this.board[23]= new Constructible("???", 23, 200);
+		this.board[24]= new Constructible("???", 24, 200);
+		this.board[25]= new CaseGare(25, "Gare du Nord");
+		this.board[26]= new Constructible("???", 26, 200);
+		this.board[27]= new Constructible("???", 27, 200);
+		this.board[28]= new CaseCompagnie(28, "compagnie de distribution des eaux");
+		this.board[29]= new Constructible("???", 29, 200);
+		this.board[30]= new CaseAllerEnPrison();
+		this.board[31]= new Constructible("???", 31, 200);
+		this.board[32]= new Constructible("???", 32, 200);
+		this.board[33]= new CaseCommunaute(33);
+		this.board[34]= new Constructible("???", 34, 200);
+		this.board[35]= new CaseGare(35, "Gare Saint Lazare ");
+		this.board[36]= new CaseChance(36);
+		this.board[37]= new Constructible("???", 37, 200);
+		this.board[38]= new CaseTaxe();
+		this.board[39]= new Constructible("???", 39, 200);	
 	}
 	
 	/**
@@ -100,16 +194,16 @@ public class Partie
 	 */
 	public int getIndiceJoueurCourant()
 	{
-		return IndiceJoueurCourant;
+		return this.IndiceJoueurCourant;
 	}
 	
 	/**
 	 * update the current player
-	 * @param indiceJoueurCourant
+	 * @param indiceJoueurCourant number of the player
 	 */
 	public void setIndiceJoueurCourant(int indiceJoueurCourant)
 	{
-		IndiceJoueurCourant = indiceJoueurCourant;
+		this.IndiceJoueurCourant = indiceJoueurCourant;
 	}
 	
 	/**

@@ -9,9 +9,12 @@ public class CaseCompagnie extends CasePropriete
 	/**
 	 * amount of the rent
 	 */
-	private int loyer;
+	private int loyer;;
 	
-	public CaseCompagnie() {
+	public CaseCompagnie(int position, String nom) {
+		this.type = "Commagnie";
+		this.position = position;
+		this.nom = nom;
 		this.loyer = loyer;
 	}
 
@@ -23,6 +26,4 @@ public class CaseCompagnie extends CasePropriete
 	{
 		return this.loyer;
 	}
-
-
 }

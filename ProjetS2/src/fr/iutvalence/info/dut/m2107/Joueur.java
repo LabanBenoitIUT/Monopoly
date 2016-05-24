@@ -48,6 +48,18 @@ public class Joueur
 	 * check if the player is in prison:
 	 */
 	private boolean enPrison;
+	
+	public Joueur(String name)
+	{
+		this.name =  name;
+		this.argentSurLeCompte = 3000;
+		this.enPrison = false;
+		this.estDansLaPartie = true;
+		this.nbCarteSortiePrison = 0;
+		this.nbDouble = 0;
+		this.position = 0;
+		this.nbTourPrison = 0;
+	}
 
 	public int getNbDouble() 
 	{

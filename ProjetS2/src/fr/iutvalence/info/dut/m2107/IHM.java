@@ -3,16 +3,25 @@
  */
 package fr.iutvalence.info.dut.m2107;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Container;
 import java.awt.Dimension;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
  * @author aurélien
- *
  */
 public class IHM extends JFrame{
+	
+	private  JPanel pan  = new JPanel();
+	private JLabel image = new JLabel();
+	private JButton Jouer = new JButton("Jouer");
 	
 	public IHM()
 	{
@@ -24,16 +33,13 @@ public class IHM extends JFrame{
 	    this.setSize(width, height);
 	    this.setLocationRelativeTo(null);
 	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    JPanel pan  = new JPanel();
-	    //Définition de sa couleur de fond
-	    pan.setBackground(Color.LIGHT_GRAY);        
-	    //On prévient notre JFrame que notre JPanel sera son content pane
 	    this.setContentPane(pan);
-	    
+	    pan.setBackground(Color.LIGHT_GRAY);  
+	    image.setIcon(new ImageIcon("G:\\git\\Monopoly\\ProjetS2\\image\\monopoly.jpg"));
+	    this.getContentPane().add(Jouer, BorderLayout.SOUTH);
+	    this.getContentPane().add(image, BorderLayout.NORTH);
 	    this.setVisible(true);
-
 	}
            
     
 }
-

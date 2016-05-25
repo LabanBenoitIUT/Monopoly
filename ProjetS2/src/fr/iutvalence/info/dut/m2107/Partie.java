@@ -7,10 +7,7 @@ package fr.iutvalence.info.dut.m2107;
  *
  */
 public class Partie
-{
-	
-	private Joueur joueur;
-	
+{	
 	/**
 	 * NbJoueurs: number of players in the game
 	 */
@@ -26,10 +23,23 @@ public class Partie
 	 */
 	private int IndiceJoueurCourant;
 		
-	Cases[] board;
+	private Cases[] board;
 	
-	public Partie()
+	private Pioche[] CaisseCommunaute;
+	
+	private Pioche[] Chance;
+	
+	private Des Des1;
+	
+	private Des Des2;
+	
+	private Joueur joueur2;
+	
+	private Joueur joueur1;
+	
+	public Partie(String name1, String name2)
 	{
+		// initialization of the board
 		this.board =  new Cases[39];
 		this.board[0]= new CaseDepart();
 		this.board[1]= new Constructible("Boulevard de belleville", 1, 200);
@@ -71,6 +81,17 @@ public class Partie
 		this.board[37]= new Constructible("???", 37, 200);
 		this.board[38]= new CaseTaxe();
 		this.board[39]= new Constructible("???", 39, 200);	
+		//initialization of the player
+		this.joueur1 = new Joueur(name1);
+		this.joueur2 = new Joueur(name1);
+		//initialization of the dice
+		this.Des1 = new Des();
+		this.Des2 = new Des();
+		//initialization of the deck
+		this.Chance = new Pioche[16];
+		this.CaisseCommunaute = new Pioche[16];
+		
+		
 	}
 	
 	/**
@@ -89,7 +110,6 @@ public class Partie
 	 */
 	public void Play()
 	{
-		Joueur joueur1 = new joueur(j1);
 		int De1;
 		int De2;
 		boolean gameover = false;

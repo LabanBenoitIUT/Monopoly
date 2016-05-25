@@ -11,7 +11,7 @@ public class CarteChance extends Cartes
 	{
 		this.type = "Chance";
 		this.texte = texte;
-		this.valeur = valeur;
+		this.valeur = valeur;		
 	}
 
 /**

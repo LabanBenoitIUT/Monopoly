@@ -94,3 +94,75 @@ public class Des
 	}
 	
 }
+
+/*
+package fr.iutvalence.info.dut.m2107;
+ */
+/**
+<<<<<<< HEAD
+ * this class defines the dice of a game
+ * @author berarddy
+=======
+ * define a dice
+ * @author Dylan Berard
+>>>>>>> branch 'master' of https://github.com/LabanBenoitIUT/Monopoly.git
+ *
+ */
+/*public class Des
+{	
+	
+	private static int NB_FACE=6;
+	private int nbFace;
+	
+	/**
+	 * Value of the first dice
+	 */
+	/*private int ValeurDes;
+	
+	/**
+	 * Constructor of a dice
+	 * @param nbFace
+	 * @param valeurDes
+	 */
+/*	public Des(int nbFace) {
+		this.nbFace = NB_FACE;
+		ValeurDes = (Integer) null;
+		
+	}
+	
+	/**
+	 * Used to get a random number between 1 and 6
+	 * @return valeurDe
+	 */
+	/*public int lancerDe(){
+
+		ValeurDes = (int)(1+ 6*Math.random());
+		return ValeurDes;
+
+	}
+	
+	/**
+	 * getter for the value of the second dice
+	 * @return int ValeurDes2
+	 */
+/*	public int getValeurDes() {
+		return ValeurDes;
+	}
+
+	
+	/**
+	 * boolean to check if the values of the twice dice are the same
+	 * @return boolean resultDouble
+	 */
+/*	public static boolean isDouble(int ValeurDes1, int ValeurDes2) {
+		
+		boolean resultDouble;
+		resultDouble = false;
+		if(ValeurDes1==ValeurDes2){
+			resultDouble = true;}
+		
+		return resultDouble;
+	}
+	
+}
+*/

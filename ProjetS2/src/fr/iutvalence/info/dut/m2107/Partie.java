@@ -29,9 +29,9 @@ public class Partie
 	
 	private Pioche[] Chance;
 	
-	private Des Des1;
+	//private Des Des1;
 	
-	private Des Des2;
+//	private Des Des2;
 	
 	private Joueur joueur2;
 	
@@ -85,8 +85,8 @@ public class Partie
 		this.joueur1 = new Joueur(name1);
 		this.joueur2 = new Joueur(name1);
 		//initialization of the dice
-		this.Des1 = new Des();
-		this.Des2 = new Des();
+	//	this.Des1 = new Des(6);
+//		this.Des2 = new Des(6);
 		//initialization of the deck
 		this.Chance = new Pioche[16];
 		this.CaisseCommunaute = new Pioche[16];
@@ -110,8 +110,6 @@ public class Partie
 	 */
 	public void Play()
 	{
-		int De1;
-		int De2;
 		boolean gameover = false;
 		boolean endOfRound = false;
 		this.IndiceJoueurCourant = 1; 

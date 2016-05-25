@@ -42,10 +42,15 @@ public class Pioche
 	 */
 	public void put(Cartes carte) throws FullPiocheException
 	{
+		int nbAl = (int)(Math.random()*(16));
+		while(this.pioche[nbAl]!=null)
+		{
+			nbAl = (int)(Math.random()*(16));
+		}
 		if (this.size == this.DEFAULT_CAPACITY) throw new FullPiocheException();
-		
-		this.pioche[this.size++] = carte;
-	}
+		this.pioche[nbAl] = carte;
+		this.size ++ ;
+	}	
 	
 	/**
 	 * Remove a message from queue (at the beginning)

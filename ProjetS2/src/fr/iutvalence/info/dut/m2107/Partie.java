@@ -21,7 +21,7 @@ public class Partie
 	/**
 	 * IndiceJoueurCourant: login of the current player
 	 */
-	private int IndiceJoueurCourant;
+	private Joueur JoueurCourant;
 		
 	private Cases[] board;
 	
@@ -29,9 +29,7 @@ public class Partie
 	
 	private Pioche[] Chance;
 	
-	//private Des Des1;
-	
-//	private Des Des2;
+	private Des Des;
 	
 	private Joueur joueur2;
 	
@@ -85,8 +83,7 @@ public class Partie
 		this.joueur1 = new Joueur(name1);
 		this.joueur2 = new Joueur(name1);
 		//initialization of the dice
-	//	this.Des1 = new Des(6);
-//		this.Des2 = new Des(6);
+		this.Des = new Des();
 		//initialization of the deck
 		this.Chance = new Pioche[16];
 		this.CaisseCommunaute = new Pioche[16];
@@ -110,23 +107,32 @@ public class Partie
 	 */
 	public void Play()
 	{
-		boolean gameover = false;
 		boolean endOfRound = false;
-		this.IndiceJoueurCourant = 1; 
-		while(gameover==false)
+		this.JoueurCourant = joueur1;
+		while(NbJoueursRestant > 1)
 		{
-			while(endOfRound==false)
+			endOfRound = false;
+			this.Des.lancerDe();
+			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
+			int pos  = this.JoueurCourant.getPosition();
+			Cases cas = this.board[pos];
+			cas.getType(); //...
+			
+			while(endOfRound == false)
 			{
-				De1=Des.lancerDe();
-				De2=Des.lancerDe();
-				this.joueur.deplace(De1+De2);
-				Cases.getType();
 				
 			}
-			
+			switchJoueurCourant();	
 		}
 	}
 	
+	private void switchJoueurCourant() {
+		if(this.JoueurCourant == this.joueur1)
+			this.JoueurCourant = this.joueur2;
+		else
+			this.JoueurCourant = this.joueur1;
+	}
+
 	/**
 	 * get the login of the current player
 	 * @return login of the player

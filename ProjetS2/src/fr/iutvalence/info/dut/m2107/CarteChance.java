@@ -17,8 +17,10 @@ public class CarteChance extends Cartes
 /**
  * Method which execute the card's instructions	
  */
-public void executer()
-{
+	public void executer()
+	{
+		
+	}
 	
 }
-}
+

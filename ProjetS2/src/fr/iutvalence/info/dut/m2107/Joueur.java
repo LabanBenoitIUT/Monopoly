@@ -160,6 +160,10 @@ public class Joueur
 	public void setPosition(int position) {
 		this.position = position;
 	}
+
+	public int getPosition() {
+		return this.position;	
+	}
 	
 	
 

@@ -21,13 +21,13 @@ public class Partie
 	/**
 	 * IndiceJoueurCourant: login of the current player
 	 */
-	private Joueur JoueurCourant;
+	private int IndiceJoueurCourant;
 		
 	private Cases[] board;
 	
-	private Pioche[] CaisseCommunaute;
+	private Pioche CaisseCommunaute;
 	
-	private Pioche[] Chance;
+	private Pioche Chance;
 	
 	private Des Des;
 	
@@ -83,12 +83,43 @@ public class Partie
 		this.joueur1 = new Joueur(name1);
 		this.joueur2 = new Joueur(name1);
 		//initialization of the dice
-		this.Des = new Des();
-		//initialization of the deck
-		this.Chance = new Pioche[16];
-		this.CaisseCommunaute = new Pioche[16];
-		
-		
+//		this.Des2 = new Des(6);
+		//initialization of the deck of lucky card
+		this.Chance = new Pioche();
+		this.Chance.put(new CarteChance("Gain","....",1500000));
+		this.Chance.put(new CarteChance("Perte","....",500));
+		this.Chance.put(new CarteChance("Perte","....",123));
+		this.Chance.put(new CarteChance("Aller en prison","....",0));
+		this.Chance.put(new CarteChance("Avancer","....",0));
+		this.Chance.put(new CarteChance("Sortie de prison","....",0));
+		this.Chance.put(new CarteChance("Avancer","....",0));
+		this.Chance.put(new CarteChance("Avancer","....",0));
+		this.Chance.put(new CarteChance("Avancer","....",0));
+		this.Chance.put(new CarteChance("Avancer","....",0));
+		this.Chance.put(new CarteChance("Avancer","....",0));
+		this.Chance.put(new CarteChance("Avancer","....",0));
+		this.Chance.put(new CarteChance("Avancer","....",0));
+		this.Chance.put(new CarteChance("Reculer","....",3));
+		this.Chance.put(new CarteChance("Gain","....",500));
+		this.Chance.put(new CarteChance("Perte","....",150));
+		//initialization of the deck of community card
+		this.CaisseCommunaute = new Pioche();
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",100));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Perte","....",1000));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Perte","....",500));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Aller en prison","....",0));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Avancer","....",0));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Sortie de prison","....",0));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",500));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",1000));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",1000));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",100));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",200));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",250));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",2000));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Perte","....",500));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Gain","....",100));
+		this.CaisseCommunaute.put(new CarteCaisseDeCommunaute("Perte","....",1235));
 	}
 	
 	/**
@@ -107,32 +138,23 @@ public class Partie
 	 */
 	public void Play()
 	{
+		boolean gameover = false;
 		boolean endOfRound = false;
-		this.JoueurCourant = joueur1;
-		while(NbJoueursRestant > 1)
+		this.IndiceJoueurCourant = 1; 
+		while(gameover==false)
 		{
-			endOfRound = false;
-			this.Des.lancerDe();
-			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
-			int pos  = this.JoueurCourant.getPosition();
-			Cases cas = this.board[pos];
-			cas.getType(); //...
-			
-			while(endOfRound == false)
+			while(endOfRound==false)
 			{
+				De1=Des.lancerDe();
+				De2=Des.lancerDe();
+				this.joueur.deplace(De1+De2);
+				Cases.getType();
 				
 			}
-			switchJoueurCourant();	
+			
 		}
 	}
 	
-	private void switchJoueurCourant() {
-		if(this.JoueurCourant == this.joueur1)
-			this.JoueurCourant = this.joueur2;
-		else
-			this.JoueurCourant = this.joueur1;
-	}
-
 	/**
 	 * get the login of the current player
 	 * @return login of the player

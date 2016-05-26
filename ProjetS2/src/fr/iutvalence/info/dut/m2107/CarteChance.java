@@ -7,9 +7,9 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class CarteChance extends Cartes
 {
-	public CarteChance(String texte, int valeur)
+	public CarteChance(String type, String texte, int valeur)
 	{
-		this.type = "Chance";
+		this.type = type;
 		this.texte = texte;
 		this.valeur = valeur;		
 	}

@@ -6,9 +6,9 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class CarteCaisseDeCommunaute extends Cartes
 {
-	public CarteCaisseDeCommunaute(String texte, int valeur)
+	public CarteCaisseDeCommunaute(String type, String texte, int valeur)
 	{
-		this.type = "Caisse de communaute";
+		this.type = type;
 		this.texte = texte;
 		this.valeur = valeur;
 	}

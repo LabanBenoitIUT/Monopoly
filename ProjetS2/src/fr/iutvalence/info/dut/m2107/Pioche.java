@@ -40,14 +40,14 @@ public class Pioche
 	 * @throws FullPiocheException 
 	 * @throws FullQueueException when message can not be added because queue was full
 	 */
-	public void put(Cartes carte) throws FullPiocheException
+	public void put(Cartes carte) //throws FullPiocheException
 	{
 		int nbAl = (int)(Math.random()*(16));
 		while(this.pioche[nbAl]!=null)
 		{
 			nbAl = (int)(Math.random()*(16));
 		}
-		if (this.size == this.DEFAULT_CAPACITY) throw new FullPiocheException();
+		if (this.size == this.DEFAULT_CAPACITY) //throw new FullPiocheException();
 		this.pioche[nbAl] = carte;
 		this.size ++ ;
 	}	

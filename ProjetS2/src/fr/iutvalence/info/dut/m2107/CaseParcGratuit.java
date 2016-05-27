@@ -11,12 +11,15 @@ public class CaseParcGratuit extends Cases
 	 */
 	private static int Somme;
 	
+	/**
+	 * create the case CaseParcGratuit 
+	 */
 	public CaseParcGratuit()
 	{
 		this.type = "Parc Gratuit";
 		this.position = 20;
 		this.nom = "Parc Gratuit";
-		this.Somme = 0;
+		Somme = 0;
 	}
 	/**
 	 * get the amount in the ParcGratuit

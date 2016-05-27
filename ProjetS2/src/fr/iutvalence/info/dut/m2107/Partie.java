@@ -143,24 +143,24 @@ public class Partie
 			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
 			int pos  = this.JoueurCourant.getPosition();
 			Cases cas = this.board[pos];
-			ActionDeLaCase(cas.getType());
+			ActionDeLaCase(cas.getType(), cas);
 			while(endOfRound==false)
 			{
-				//Choix();
+				//... Choix()
 			}
 			switchJoueurCourant();
 		}
 	}
 	
-	public void ActionDeLaCase(String type) 
-	{		
+	public void ActionDeLaCase(String type, Cases cas) 
+	{	
 		switch (type)
 		{
 		  case "Constructible":
 			  //...
 			  break;
 		  case "Aller en prison":
-			//...  goToPrison(JoueurCourant);
+			  	this.JoueurCourant.setPosition(10);
 			  break;
 		  case "Chance":
 			  this.Chance.get();
@@ -169,13 +169,13 @@ public class Partie
 			  this.CaisseCommunaute.get();
 			  break;
 		  case "Compagnie":
-			  //...
+			  GereCompagnie((CaseCompagnie) cas, JoueurCourant);
 			  break;
 		  case "Depart":
 			  this.JoueurCourant.changeSolde(CaseDepart.getSOMME());
 			  break;
 		  case "Gare":
-			  //**
+			  GereGare((CaseGare) cas, JoueurCourant);
 			  break;
 		  case "impot":
 			  this.JoueurCourant.changeSolde(CaseImpot.getSomme());
@@ -189,10 +189,16 @@ public class Partie
 				  if(this.JoueurCourant.getNbTourPrison() > 3 )
 				  {
 					  this.JoueurCourant.changeSolde(-500);
+					  this.JoueurCourant.setEnPrison(false);
 				  }
 				  else
 				  {
-					// payer ou lancer des
+					  this.Des.lancerDes();
+					  if (Des.isDouble(this.Des.getValeurDes1(), this.Des.getValeurDes2())==true)
+					  {
+						  this.JoueurCourant.setEnPrison(false);
+					  }
+					  	
 				  }  
 			  }  
 			  break;
@@ -230,7 +236,7 @@ public class Partie
 	/**
 	 * GerePrison: manage a joueur in the jail
 	 */
-	public void GerePrison(Cases Case, Joueur Joueur)
+	public void GerePrison(CasePrison Case, Joueur Joueur)
 	{
 		
 	}
@@ -238,7 +244,7 @@ public class Partie
 	/**
 	 * GereConstructible: manage if the current case are a Constructible case
 	 */
-	public void GereConstructible(Cases Case, Joueur Joueur)
+	public void GereConstructible(Constructible Case, Joueur Joueur)
 	{
 		
 	}
@@ -254,17 +260,23 @@ public class Partie
 	/**
 	 * gereGare: manage if the player is on a station
 	 */
-	public void GereGare(Cases Case, Joueur joueur)
+	public void GereGare(CaseGare Case, Joueur joueur)
 	{
-		
+		if(Case.getProprietaire()!=joueur){
+			joueur.changeSolde(-50);
+			Case.getProprietaire().changeSolde(50);	
+		}
 	}
 	
 	/**
 	 * GereCompagnie: manage if the player is on a company
 	 */
-	public void GereCompagnie(Cases Case, Joueur joueur)
+	public void GereCompagnie(CaseCompagnie Case, Joueur joueur)
 	{
-		
+		if(Case.getProprietaire()!=joueur){
+			joueur.changeSolde(-50);
+			Case.getProprietaire().changeSolde(50);	
+		}
 	}
 	
 	/**

@@ -11,6 +11,11 @@ public class CaseGare extends CasePropriete
 	 */
 	private int loyer;
 	
+	/**
+	 * create a case Gare
+	 * @param position : the position of the case
+	 * @param nom : the name
+	 */
 	public CaseGare(int position, String nom)
 	{
 		this.type = "Gare";

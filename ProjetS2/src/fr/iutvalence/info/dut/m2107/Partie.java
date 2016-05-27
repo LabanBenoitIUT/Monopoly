@@ -18,10 +18,7 @@ public class Partie
 	 */
 	private int NbJoueursRestant;
 	
-	/**
-	 * IndiceJoueurCourant: login of the current player
-	 */
-	private int IndiceJoueurCourant;
+	private Joueur JoueurCourant;
 		
 	private Cases[] board;
 	
@@ -136,40 +133,103 @@ public class Partie
 	 *  switch current player
 	 * game over
 	 */
-	public void Play()
+	public void play()
 	{
-		boolean gameover = false;
 		boolean endOfRound = false;
-		this.IndiceJoueurCourant = 1; 
-		while(gameover==false)
+		this.JoueurCourant = joueur1;
+		while(NbJoueursRestant > 1)
 		{
+			this.Des.lancerDes();
+			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
+			int pos  = this.JoueurCourant.getPosition();
+			Cases cas = this.board[pos];
+			ActionDeLaCase(cas.getType(), cas);
 			while(endOfRound==false)
 			{
+<<<<<<< HEAD
 				this.Des.lancerDe();
 				this.joueur.deplace(this.Des.getValeurDes1(), this.Des.getValeurDes2());
 				Cases.getType();
 				
+=======
+				//... Choix()
+>>>>>>> branch 'master' of https://github.com/LabanBenoitIUT/Monopoly.git
 			}
-			
+			switchJoueurCourant();
 		}
 	}
 	
-	/**
-	 * get the login of the current player
-	 * @return login of the player
-	 */
-	public int getIndiceJoueurCourant()
-	{
-		return this.IndiceJoueurCourant;
+	public void ActionDeLaCase(String type, Cases cas) 
+	{	
+		switch (type)
+		{
+		  case "Constructible":
+			  //...
+			  break;
+		  case "Aller en prison":
+			  	this.JoueurCourant.setPosition(10);
+			  break;
+		  case "Chance":
+			  this.Chance.get();
+			  break;
+		  case "Caisse de communaute":
+			  this.CaisseCommunaute.get();
+			  break;
+		  case "Compagnie":
+			  GereCompagnie((CaseCompagnie) cas, JoueurCourant);
+			  break;
+		  case "Depart":
+			  this.JoueurCourant.changeSolde(CaseDepart.getSOMME());
+			  break;
+		  case "Gare":
+			  GereGare((CaseGare) cas, JoueurCourant);
+			  break;
+		  case "impot":
+			  this.JoueurCourant.changeSolde(CaseImpot.getSomme());
+			  break;
+		  case "Parc Gratuit":
+			  this.JoueurCourant.changeSolde(CaseParcGratuit.getSomme());
+			  break;
+		  case "Prison":
+			  if(this.JoueurCourant.isEnPrison() == true)
+			  {
+				  if(this.JoueurCourant.getNbTourPrison() > 3 )
+				  {
+					  this.JoueurCourant.changeSolde(-500);
+					  this.JoueurCourant.setEnPrison(false);
+				  }
+				  else
+				  {
+					  this.Des.lancerDes();
+					  if (Des.isDouble(this.Des.getValeurDes1(), this.Des.getValeurDes2())==true)
+					  {
+						  this.JoueurCourant.setEnPrison(false);
+					  }
+					  	
+				  }  
+			  }  
+			  break;
+		  case "Taxe de luxe":
+			  this.JoueurCourant.changeSolde(CaseTaxe.getSomme());
+			  break;
+		}
 	}
-	
-	/**
-	 * update the current player
-	 * @param indiceJoueurCourant number of the player
+
+	/*
+	 * 
 	 */
-	public void setIndiceJoueurCourant(int indiceJoueurCourant)
+	public void switchJoueurCourant() 
 	{
-		this.IndiceJoueurCourant = indiceJoueurCourant;
+		if(this.JoueurCourant == this.joueur1)
+		{
+			this.joueur1 = this.JoueurCourant;
+			this.JoueurCourant = this.joueur2;
+		}
+		else
+		{
+			this.joueur2 = this.JoueurCourant;
+			this.JoueurCourant = this.joueur1;
+		}
 	}
 	
 	/**
@@ -178,12 +238,12 @@ public class Partie
 	public void GerePosition(Cases Case, Joueur Joueur)
 	{
 		
-	}
+	} 
 	
 	/**
 	 * GerePrison: manage a joueur in the jail
 	 */
-	public void GerePrison(Cases Case, Joueur Joueur)
+	public void GerePrison(CasePrison Case, Joueur Joueur)
 	{
 		
 	}
@@ -191,7 +251,7 @@ public class Partie
 	/**
 	 * GereConstructible: manage if the current case are a Constructible case
 	 */
-	public void GereConstructible(Cases Case, Joueur Joueur)
+	public void GereConstructible(Constructible Case, Joueur Joueur)
 	{
 		
 	}
@@ -207,17 +267,23 @@ public class Partie
 	/**
 	 * gereGare: manage if the player is on a station
 	 */
-	public void GereGare(Cases Case, Joueur joueur)
+	public void GereGare(CaseGare Case, Joueur joueur)
 	{
-		
+		if(Case.getProprietaire()!=joueur){
+			joueur.changeSolde(-50);
+			Case.getProprietaire().changeSolde(50);	
+		}
 	}
 	
 	/**
 	 * GereCompagnie: manage if the player is on a company
 	 */
-	public void GereCompagnie(Cases Case, Joueur joueur)
+	public void GereCompagnie(CaseCompagnie Case, Joueur joueur)
 	{
-		
+		if(Case.getProprietaire()!=joueur){
+			joueur.changeSolde(-50);
+			Case.getProprietaire().changeSolde(50);	
+		}
 	}
 	
 	/**

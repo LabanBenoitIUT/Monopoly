@@ -57,10 +57,10 @@ public class Pioche
 	 * @return the removed message
 	 * @throws EmptyQueueException when message can not be removed because queue was empty
 	 */
-	public Cartes get() throws EmptyPiocheException
+	public Cartes get() //throws EmptyPiocheException
 	{
 		this.size = this.size - 1;
-		if (this.size < 0) throw new EmptyPiocheException();
+		//if (this.size < 0) throw new EmptyPiocheException();
 		Cartes carte = this.pioche[this.size];
 		if (carte.type != "Sortir de prison")
 			//To Do : ActiveCarte();

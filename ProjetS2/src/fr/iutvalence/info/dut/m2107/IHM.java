@@ -20,26 +20,34 @@ import javax.swing.JPanel;
 public class IHM extends JFrame{
 	
 	private  JPanel pan  = new JPanel();
-	private JLabel image = new JLabel();
 	private JButton Jouer = new JButton("Jouer");
+	private JButton Quitter = new JButton("Quitter");
 	
 	public IHM()
 	{
-	
-		this.setTitle("Monopoly");
-	    Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-	    int height = (int)dimension.getHeight();
-	    int width  = (int)dimension.getWidth();
-	    this.setSize(width, height);
-	    this.setLocationRelativeTo(null);
-	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    this.setContentPane(pan);
-	    pan.setBackground(Color.LIGHT_GRAY);  
-	    image.setIcon(new ImageIcon("G:\\git\\Monopoly\\ProjetS2\\image\\monopoly.jpg"));
-	    this.getContentPane().add(Jouer, BorderLayout.SOUTH);
-	    this.getContentPane().add(image, BorderLayout.NORTH);
-	    this.setVisible(true);
+		JFrame frame = new JFrame();
+		frame.add(new JLabel(new ImageIcon("G:\\git\\Monopoly\\ProjetS2\\image\\monopoly.jpg")));
+		frame.setTitle("Monopoly");
+		frame.pack();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		//int height = (int)dimension.getHeight();
+		int width  = (int)dimension.getWidth();
+		frame.setSize(/*width,height*/ 600,500);
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);
+		pan.setLayout(null);
+		Jouer.setBounds(244, 330, 100, 50);
+		Jouer.setBackground(Color.orange);
+		Quitter.setBounds(500, 420, 75, 35);
+		Quitter.setBackground(Color.LIGHT_GRAY);
+		pan.add(Jouer);
+		pan.add(Quitter);
+		frame.add(pan);
+		
+
+	    
+	    
+	  
 	}
-           
-    
 }

@@ -9,22 +9,25 @@ public class CaseParcGratuit extends Cases
 	/**
 	 * somme: how much money in the ParcGratuit
 	 */
-	private int somme;
+	private static int Somme;
 	
+	/**
+	 * create the case CaseParcGratuit 
+	 */
 	public CaseParcGratuit()
 	{
 		this.type = "Parc Gratuit";
 		this.position = 20;
 		this.nom = "Parc Gratuit";
-		this.somme = 0;
+		Somme = 0;
 	}
 	/**
 	 * get the amount in the ParcGratuit
 	 * @return somme
 	 */
-	public int getSomme()
+	public static int getSomme()
 	{
-		return this.somme;
+		return Somme;
 	}
 	
 	/**
@@ -33,7 +36,7 @@ public class CaseParcGratuit extends Cases
 	 */
 	public void setSomme(int somme)
 	{
-		this.somme = somme;
+		Somme = somme;
 	}
 
 }

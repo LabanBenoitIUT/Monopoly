@@ -16,7 +16,7 @@ public class Main
 	public static void main(String[] args)
 	{
 		IHM fenetre = new IHM();
-		new Partie(args[0], args[2]).Play();
+		new Partie(args[0], args[2]).play();
 		System.out.println();
 	}
 }

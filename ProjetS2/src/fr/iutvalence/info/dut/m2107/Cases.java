@@ -31,7 +31,7 @@ public abstract class Cases
 	/**
 	 * @return the name
 	 */
-	public String getTNom() {
+	public String getNom() {
 		return this.nom;
 	}
 

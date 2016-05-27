@@ -31,7 +31,7 @@ public class IHM extends JFrame{
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-		int height = (int)dimension.getHeight();
+		//int height = (int)dimension.getHeight();
 		int width  = (int)dimension.getWidth();
 		frame.setSize(/*width,height*/ 600,500);
 		frame.setLocationRelativeTo(null);

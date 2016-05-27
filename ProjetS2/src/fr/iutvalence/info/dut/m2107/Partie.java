@@ -225,7 +225,7 @@ public class Partie
 	public void GerePosition(Cases Case, Joueur Joueur)
 	{
 		
-	}
+	} 
 	
 	/**
 	 * GerePrison: manage a joueur in the jail

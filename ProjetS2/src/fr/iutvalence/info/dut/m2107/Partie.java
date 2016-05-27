@@ -145,9 +145,8 @@ public class Partie
 		{
 			while(endOfRound==false)
 			{
-				De1=Des.lancerDe();
-				De2=Des.lancerDe();
-				this.joueur.deplace(De1+De2);
+				this.Des.lancerDe();
+				this.joueur.deplace(this.Des.getValeurDes1(), this.Des.getValeurDes2());
 				Cases.getType();
 				
 			}

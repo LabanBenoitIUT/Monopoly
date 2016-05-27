@@ -133,7 +133,7 @@ public class Partie
 	 *  switch current player
 	 * game over
 	 */
-	public void Play()
+	public void play()
 	{
 		boolean endOfRound = false;
 		this.JoueurCourant = joueur1;
@@ -146,9 +146,9 @@ public class Partie
 			ActionDeLaCase(cas.getType());
 			while(endOfRound==false)
 			{
-				Choix();
+				//Choix();
 			}
-			switchJoueurCourant();	
+			switchJoueurCourant();
 		}
 	}
 	
@@ -184,12 +184,21 @@ public class Partie
 			  this.JoueurCourant.changeSolde(CaseParcGratuit.getSomme());
 			  break;
 		  case "Prison":
-			  //...
+			  if(this.JoueurCourant.isEnPrison() == true)
+			  {
+				  if(this.JoueurCourant.getNbTourPrison() > 3 )
+				  {
+					  this.JoueurCourant.changeSolde(-500);
+				  }
+				  else
+				  {
+					// payer ou lancer des
+				  }  
+			  }  
 			  break;
 		  case "Taxe de luxe":
 			  this.JoueurCourant.changeSolde(CaseTaxe.getSomme());
 			  break;
-		  
 		}
 	}
 

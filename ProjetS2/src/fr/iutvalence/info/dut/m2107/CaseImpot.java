@@ -9,7 +9,7 @@ public class CaseImpot extends Cases
 	/**
 	 * the cost of the box
 	 */
-	private final int somme;
+	private final static int somme = -150;
 	
 	/**
 	 * constructor of the case CaseImpot
@@ -18,16 +18,15 @@ public class CaseImpot extends Cases
 		this.type = "impot";
 		this.position = 4;
 		this.nom = "impot";
-		this.somme = 150 ;
 	}
 
 	/**
 	 * get the amount of tax
 	 * @return the amount
 	 */
-	public int getSomme()
+	public static int getSomme()
 	{
-		return this.somme;
+		return somme;
 	}
 
 }

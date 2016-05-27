@@ -36,7 +36,7 @@ public class Des
 	/**
 	 * Used to get a random number between 1 and 6
 	 */
-	public void lancerDe(){
+	public void lancerDes(){
 
 		this.ValeurDes1 = (int)(1+ 6*Math.random());
 		this.ValeurDes2 = (int)(1+ 6*Math.random());

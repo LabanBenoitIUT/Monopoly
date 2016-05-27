@@ -18,10 +18,7 @@ public class Partie
 	 */
 	private int NbJoueursRestant;
 	
-	/**
-	 * IndiceJoueurCourant: login of the current player
-	 */
-	private int IndiceJoueurCourant;
+	private Joueur JoueurCourant;
 		
 	private Cases[] board;
 	
@@ -138,39 +135,79 @@ public class Partie
 	 */
 	public void Play()
 	{
-		boolean gameover = false;
 		boolean endOfRound = false;
-		this.IndiceJoueurCourant = 1; 
-		while(gameover==false)
+		this.JoueurCourant = joueur1;
+		while(NbJoueursRestant > 1)
 		{
+			this.Des.lancerDes();
+			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
+			int pos  = this.JoueurCourant.getPosition();
+			Cases cas = this.board[pos];
+			ActionDeLaCase(cas.getType());
 			while(endOfRound==false)
 			{
-				De1=Des.lancerDe();
-				De2=Des.lancerDe();
-				this.joueur.deplace(De1+De2);
-				Cases.getType();
-				
+				Choix();
 			}
-			
+			switchJoueurCourant();	
 		}
 	}
 	
-	/**
-	 * get the login of the current player
-	 * @return login of the player
-	 */
-	public int getIndiceJoueurCourant()
-	{
-		return this.IndiceJoueurCourant;
+	public void ActionDeLaCase(String type) 
+	{		
+		switch (type)
+		{
+		  case "Constructible":
+			  //...
+			  break;
+		  case "Aller en prison":
+			//...  goToPrison(JoueurCourant);
+			  break;
+		  case "Chance":
+			  this.Chance.get();
+			  break;
+		  case "Caisse de communaute":
+			  this.CaisseCommunaute.get();
+			  break;
+		  case "Compagnie":
+			  //...
+			  break;
+		  case "Depart":
+			  this.JoueurCourant.changeSolde(CaseDepart.getSOMME());
+			  break;
+		  case "Gare":
+			  //**
+			  break;
+		  case "impot":
+			  this.JoueurCourant.changeSolde(CaseImpot.getSomme());
+			  break;
+		  case "Parc Gratuit":
+			  this.JoueurCourant.changeSolde(CaseParcGratuit.getSomme());
+			  break;
+		  case "Prison":
+			  //...
+			  break;
+		  case "Taxe de luxe":
+			  this.JoueurCourant.changeSolde(CaseTaxe.getSomme());
+			  break;
+		  
+		}
 	}
-	
-	/**
-	 * update the current player
-	 * @param indiceJoueurCourant number of the player
+
+	/*
+	 * 
 	 */
-	public void setIndiceJoueurCourant(int indiceJoueurCourant)
+	public void switchJoueurCourant() 
 	{
-		this.IndiceJoueurCourant = indiceJoueurCourant;
+		if(this.JoueurCourant == this.joueur1)
+		{
+			this.joueur1 = this.JoueurCourant;
+			this.JoueurCourant = this.joueur2;
+		}
+		else
+		{
+			this.joueur2 = this.JoueurCourant;
+			this.JoueurCourant = this.joueur1;
+		}
 	}
 	
 	/**

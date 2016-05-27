@@ -10,7 +10,7 @@ public class CaseAllerEnPrison extends Cases{
 	/**
 	 * the values of the position of the prison
 	 */
-	private int destination;
+	private final int destination;
 	
 	/**
 	 * create the case AllerEnPrison
@@ -33,7 +33,7 @@ public class CaseAllerEnPrison extends Cases{
 	 * upgrade the position of the current player with the position of the prison
 	 * @param joueur the current player
 	 */
-	public void goToPrison(Joueur joueur){
+	public static void goToPrison(Joueur joueur){
 		joueur.setPosition(getPosition());
 	}
 }

@@ -29,7 +29,7 @@ public class Des
 	 * @param valueDes2
 	 */
 	public Des() {
-		ValeurDes1 =(Integer) null;
+		ValeurDes1 = (Integer) null;
 		ValeurDes2 = (Integer) null;
 	}
 
@@ -37,7 +37,7 @@ public class Des
 	 * Used to get a random number between 1 and 6
 	 */
 	public void lancerDes(){
-
+		
 		this.ValeurDes1 = (int)(1+ 6*Math.random());
 		this.ValeurDes2 = (int)(1+ 6*Math.random());
 	}
@@ -63,7 +63,7 @@ public class Des
 	 * boolean to check if the values of the twice dice are the same
 	 * @return boolean resultDouble
 	 */
-	public static boolean isDouble(int ValeurDes1, int ValeurDes2) {
+	public boolean isDouble(int ValeurDes1, int ValeurDes2) {
 		
 		boolean resultDouble;
 		resultDouble = false;

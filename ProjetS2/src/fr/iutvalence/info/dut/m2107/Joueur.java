@@ -127,6 +127,10 @@ public class Joueur
 		return this.argentSurLeCompte;
 	}
 
+	public void setEnPrison(boolean enPrison) {
+		this.enPrison = enPrison;
+	}
+
 	/**
 	 * get if the player is in prison
 	 * @return TRUE if he is and FALSE if isn't.

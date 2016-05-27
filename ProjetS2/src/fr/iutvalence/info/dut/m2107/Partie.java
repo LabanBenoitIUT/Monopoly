@@ -143,7 +143,7 @@ public class Partie
 			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
 			int pos  = this.JoueurCourant.getPosition();
 			Cases cas = this.board[pos];
-			ActionDeLaCase(cas.getType());
+			ActionDeLaCase(cas.getType(), cas);
 			while(endOfRound==false)
 			{
 				//... Choix()

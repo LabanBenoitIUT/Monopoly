@@ -136,8 +136,8 @@ public class Partie
 	public void play()
 	{
 		boolean endOfRound = false;
-		this.JoueurCourant = joueur1;
-		while(NbJoueursRestant > 1)
+		this.JoueurCourant = this.joueur1;
+		while(this.NbJoueursRestant > 1)
 		{
 			this.Des.lancerDes();
 			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
@@ -152,6 +152,10 @@ public class Partie
 		}
 	}
 	
+	/**
+	 * action of the case 
+	 * @param type : type of the case
+	 */
 	public void ActionDeLaCase(String type) 
 	{		
 		switch (type)
@@ -202,8 +206,8 @@ public class Partie
 		}
 	}
 
-	/*
-	 * 
+	/**
+	 * Switch the current player
 	 */
 	public void switchJoueurCourant() 
 	{

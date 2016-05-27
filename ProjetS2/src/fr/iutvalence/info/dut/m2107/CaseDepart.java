@@ -6,7 +6,7 @@ package fr.iutvalence.info.dut.m2107;
  */
 public class CaseDepart extends Cases 
 {
-	private static int SOMME = 200;
+	private final static int SOMME = 200;
 
 
 	public static int getSOMME() {

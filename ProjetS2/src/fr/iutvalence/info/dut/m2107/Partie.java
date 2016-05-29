@@ -146,14 +146,10 @@ public class Partie
 			ActionDeLaCase(cas.getType(), cas);
 			while(endOfRound==false)
 			{
-<<<<<<< HEAD
-				this.Des.lancerDe();
-				this.joueur.deplace(this.Des.getValeurDes1(), this.Des.getValeurDes2());
-				Cases.getType();
-				
-=======
-				//... Choix()
->>>>>>> branch 'master' of https://github.com/LabanBenoitIUT/Monopoly.git
+				this.Des.lancerDes();
+				int ValDes = this.Des.getValeurDes1()+ this.Des.getValeurDes2(); //addition of the two dice's values
+				this.JoueurCourant.deplace(ValDes); //move the current player position
+				cas.getType();
 			}
 			switchJoueurCourant();
 		}

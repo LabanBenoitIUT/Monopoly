@@ -34,6 +34,6 @@ public class CaseAllerEnPrison extends Cases{
 	 * @param joueur the current player
 	 */
 	public static void goToPrison(Joueur joueur){
-		joueur.setPosition(getPosition());
+		joueur.setPosition(Partie.JoueurCourant.getPosition()); // JoueurCourant n'est pas visible...
 	}
 }

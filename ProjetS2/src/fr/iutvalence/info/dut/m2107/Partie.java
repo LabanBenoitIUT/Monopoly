@@ -54,6 +54,27 @@ public class Partie
 	private Joueur joueur1;
 	
 	/**
+	 * boolean to check if the round of a player is over or not
+	 */
+	private boolean endOfRound;
+	
+	/**
+	 * setter for EndOfRound
+	 * @return
+	 */
+	public boolean isEndOfRound() {
+		return endOfRound;
+	}
+
+	/**
+	 * getter for EndOfRound
+	 * @param endOfRound
+	 */
+	public void setEndOfRound(boolean endOfRound) {
+		this.endOfRound = endOfRound;
+	}
+
+	/**
 	 * create a game of monopoly
 	 * @param name1 : name of the player 1
 	 * @param name2 : name of the player 2
@@ -161,16 +182,16 @@ public class Partie
 	 */
 	public void play()
 	{
-		boolean endOfRound = false;
 		this.JoueurCourant = this.joueur1;
 		while(this.NbJoueursRestant > 1)
 		{
+			this.endOfRound=false;
 			this.Des.lancerDes();
 			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
 			int pos  = this.JoueurCourant.getPosition();
 			Cases cas = this.board[pos];
 			ActionDeLaCase(cas.getType(), cas);
-			while(endOfRound==false)
+			while(this.endOfRound==false)
 			{
 				this.Des.lancerDes();
 				int ValDes = this.Des.getValeurDes1()+ this.Des.getValeurDes2(); //addition of the two dice's values
@@ -322,7 +343,9 @@ public class Partie
 		if(Case.getProprietaire()!=joueur){
 			joueur.changeSolde(-50);
 			Case.getProprietaire().changeSolde(50);	
+			
 		}
+		
 	}
 	
 	/**
@@ -345,6 +368,7 @@ public class Partie
 			{
 				this.JoueurCourant.changeSolde(-50);
 				this.JoueurCourant.setPosition(this.Des.getValeurDes1()+this.Des.getValeurDes2()+10);
+
 			}
 		}
 	}
@@ -366,6 +390,11 @@ public class Partie
 	public void EchangeBiens(Joueur joueur)
 	{
 		
+	}
+	
+	public void Acheter(CasePropriete Case, Joueur joueur){
+		joueur.changeSolde(-Case.getValeurAchat());
+		Case.setProprietaire(joueur);
 	}
 	
 }

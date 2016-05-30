@@ -304,9 +304,9 @@ public class Partie
 	 * @param Case : the position of the player
 	 * @param joueur : the current player
 	 */
-	public void GereGare(CaseGare Case, Joueur joueur)	//pas besoin de paramètre joueur, il s'agit de JoueurCourrant
+	public void GereGare(CaseGare Case, Joueur joueur)
 	{
-		if(Case.getProprietaire()!=joueur){				// de meme pour case, il s'agit de la position de JoueurCourrant
+		if(Case.getProprietaire()!=joueur){
 			joueur.changeSolde(-50);
 			Case.getProprietaire().changeSolde(50);	
 		}
@@ -315,9 +315,9 @@ public class Partie
 	/**
 	 * GereCompagnie: manage if the player is on a company
 	 * @param Case : the position of the player
-	 * @param joueur
+	 * @param joueur : the player
 	 */
-	public void GereCompagnie(CaseCompagnie Case, Joueur joueur)	//pas besoin de paramètre joueur, il s'agit de JoueurCourrant
+	public void GereCompagnie(CaseCompagnie Case, Joueur joueur)
 	{
 		if(Case.getProprietaire()!=joueur){
 			joueur.changeSolde(-50);
@@ -327,10 +327,8 @@ public class Partie
 	
 	/**
 	 * GereDouble: manage if the player get a double with the dices
-	 * @param des : the dice
-	 * @param joueur
 	 */
-	public void GereDouble(Des des, Joueur joueur)	//pas besoin de paramètre, on utilisera this.Des, this.JoueurCourrant
+	public void GereDouble()
 	{
 		if(this.JoueurCourant.getPosition() != 10)
 		{
@@ -346,7 +344,7 @@ public class Partie
 			if(this.JoueurCourant.getNbDouble()<=3)
 			{
 				this.JoueurCourant.changeSolde(-50);
-				this.JoueurCourant.setPotition(this.Des.getValeurDes1()+this.Des.getValeurDes2()+10);
+				this.JoueurCourant.setPosition(this.Des.getValeurDes1()+this.Des.getValeurDes2()+10);
 			}
 		}
 	}

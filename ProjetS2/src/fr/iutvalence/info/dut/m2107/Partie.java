@@ -343,7 +343,6 @@ public class Partie
 		if(Case.getProprietaire()!=joueur){
 			joueur.changeSolde(-50);
 			Case.getProprietaire().changeSolde(50);	
-			
 		}
 		
 	}
@@ -378,10 +377,14 @@ public class Partie
 	 * @param Case
 	 * @param joueur
 	 */
-	public void Vendre(Cases Case, Joueur joueur)
+	public void Vendre(CasePropriete Case, Joueur joueuracheteur, int prixvente)
 	{
-		
+		JoueurCourant.changeSolde(prixvente);
+		joueuracheteur.changeSolde(-prixvente);
+		Case.setProprietaire(joueuracheteur);
 	}
+			
+
 	
 	/**
 	 * EchangeBiens: allow to the player to exchange a property with an other player

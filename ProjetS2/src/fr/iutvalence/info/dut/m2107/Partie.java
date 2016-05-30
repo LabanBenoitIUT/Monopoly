@@ -18,20 +18,46 @@ public class Partie
 	 */
 	private int NbJoueursRestant;
 	
+	/**
+	 * the current player
+	 */
 	private Joueur JoueurCourant;
 		
+	/**
+	 * the board
+	 */
 	private Cases[] board;
 	
+	/**
+	 * the deck of CaisseCommunaute card
+	 */
 	private Pioche CaisseCommunaute;
 	
+	/**
+	 * the deck of Chance card
+	 */
 	private Pioche Chance;
 	
+	/**
+	 * the dice
+	 */
 	private Des Des;
 	
+	/**
+	 * the player 2
+	 */
 	private Joueur joueur2;
 	
+	/**
+	 * the player 1
+	 */
 	private Joueur joueur1;
 	
+	/**
+	 * create a game of monopoly
+	 * @param name1 : name of the player 1
+	 * @param name2 : name of the player 2
+	 */
 	public Partie(String name1, String name2)
 	{
 		// initialization of the board
@@ -136,8 +162,8 @@ public class Partie
 	public void play()
 	{
 		boolean endOfRound = false;
-		this.JoueurCourant = joueur1;
-		while(NbJoueursRestant > 1)
+		this.JoueurCourant = this.joueur1;
+		while(this.NbJoueursRestant > 1)
 		{
 			this.Des.lancerDes();
 			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
@@ -155,6 +181,11 @@ public class Partie
 		}
 	}
 	
+	/**
+	 * execute the action of the case 
+	 * @param type : type of case
+	 * @param cas : the case
+	 */
 	public void ActionDeLaCase(String type, Cases cas) 
 	{	
 		switch (type)
@@ -172,13 +203,13 @@ public class Partie
 			  this.CaisseCommunaute.get();
 			  break;
 		  case "Compagnie":
-			  GereCompagnie((CaseCompagnie) cas, JoueurCourant);
+			  GereCompagnie((CaseCompagnie) cas, this.JoueurCourant);
 			  break;
 		  case "Depart":
 			  this.JoueurCourant.changeSolde(CaseDepart.getSOMME());
 			  break;
 		  case "Gare":
-			  GereGare((CaseGare) cas, JoueurCourant);
+			  GereGare((CaseGare) cas, this.JoueurCourant);
 			  break;
 		  case "impot":
 			  this.JoueurCourant.changeSolde(CaseImpot.getSomme());
@@ -197,7 +228,7 @@ public class Partie
 				  else
 				  {
 					  this.Des.lancerDes();
-					  if (Des.isDouble(this.Des.getValeurDes1(), this.Des.getValeurDes2())==true)
+					  if (this.Des.isDouble(this.Des.getValeurDes1(), this.Des.getValeurDes2())==true)
 					  {
 						  this.JoueurCourant.setEnPrison(false);
 					  }
@@ -211,8 +242,8 @@ public class Partie
 		}
 	}
 
-	/*
-	 * 
+	/**
+	 * Update the current player
 	 */
 	public void switchJoueurCourant() 
 	{
@@ -230,6 +261,8 @@ public class Partie
 	
 	/**
 	 * GerePosition: manage how to do in function of the position
+	 * @param Case : the position of the player
+	 * @param Joueur : the current player
 	 */
 	public void GerePosition(Cases Case, Joueur Joueur)
 	{
@@ -237,7 +270,9 @@ public class Partie
 	} 
 	
 	/**
-	 * GerePrison: manage a joueur in the jail
+	 * GerePrison: manage a player in the jail
+	 * @param Case : the position of the player
+	 * @param Joueur
 	 */
 	public void GerePrison(CasePrison Case, Joueur Joueur)
 	{
@@ -246,6 +281,8 @@ public class Partie
 	
 	/**
 	 * GereConstructible: manage if the current case are a Constructible case
+	 * @param Case
+	 * @param Joueur
 	 */
 	public void GereConstructible(Constructible Case, Joueur Joueur)
 	{
@@ -254,6 +291,8 @@ public class Partie
 	
 	/**
 	 * executerCarte: execute the effect of the card
+	 * @param carte
+	 * @param joueur
 	 */
 	public void executerCarte(Cartes carte, Joueur joueur)
 	{
@@ -262,10 +301,12 @@ public class Partie
 	
 	/**
 	 * gereGare: manage if the player is on a station
+	 * @param Case : the position of the player
+	 * @param joueur : the current player
 	 */
-	public void GereGare(CaseGare Case, Joueur joueur)
+	public void GereGare(CaseGare Case, Joueur joueur)	//pas besoin de paramètre joueur, il s'agit de JoueurCourrant
 	{
-		if(Case.getProprietaire()!=joueur){
+		if(Case.getProprietaire()!=joueur){				// de meme pour case, il s'agit de la position de JoueurCourrant
 			joueur.changeSolde(-50);
 			Case.getProprietaire().changeSolde(50);	
 		}
@@ -273,8 +314,10 @@ public class Partie
 	
 	/**
 	 * GereCompagnie: manage if the player is on a company
+	 * @param Case : the position of the player
+	 * @param joueur
 	 */
-	public void GereCompagnie(CaseCompagnie Case, Joueur joueur)
+	public void GereCompagnie(CaseCompagnie Case, Joueur joueur)	//pas besoin de paramètre joueur, il s'agit de JoueurCourrant
 	{
 		if(Case.getProprietaire()!=joueur){
 			joueur.changeSolde(-50);
@@ -284,14 +327,34 @@ public class Partie
 	
 	/**
 	 * GereDouble: manage if the player get a double with the dices
+	 * @param des : the dice
+	 * @param joueur
 	 */
-	public void GereDouble(Des des, Joueur joueur)
+	public void GereDouble(Des des, Joueur joueur)	//pas besoin de paramètre, on utilisera this.Des, this.JoueurCourrant
 	{
-		
+		if(this.JoueurCourant.getPosition() != 10)
+		{
+			if(this.Des.getValeurDes1() == this.Des.getValeurDes2())
+				this.JoueurCourant.setNbDouble(1);
+			if(this.JoueurCourant.getNbDouble()<=3)
+				this.JoueurCourant.setPosition(10);
+		}
+		else
+		{
+			if(this.Des.getValeurDes1() == this.Des.getValeurDes2())
+				this.JoueurCourant.setNbDouble(1);
+			if(this.JoueurCourant.getNbDouble()<=3)
+			{
+				this.JoueurCourant.changeSolde(-50);
+				this.JoueurCourant.setPotition(this.Des.getValeurDes1()+this.Des.getValeurDes2()+10);
+			}
+		}
 	}
 	
 	/**
 	 * Vendre: allow to the player to sell a property
+	 * @param Case
+	 * @param joueur
 	 */
 	public void Vendre(Cases Case, Joueur joueur)
 	{
@@ -300,6 +363,7 @@ public class Partie
 	
 	/**
 	 * EchangeBiens: allow to the player to exchange a property with an other player
+	 * @param joueur
 	 */
 	public void EchangeBiens(Joueur joueur)
 	{

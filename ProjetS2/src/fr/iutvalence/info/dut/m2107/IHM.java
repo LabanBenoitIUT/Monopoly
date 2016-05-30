@@ -41,12 +41,8 @@ public class IHM extends JFrame implements ActionListener{
 		accueil.setIconImage(Toolkit.getDefaultToolkit().getImage("image\\logo.jpg")); 
 		accueil.add(new JLabel(new ImageIcon(/*G:\\git\\Monopoly\\ProjetS2\\*/"image\\monopoly.jpg")));
 		accueil.setTitle("Monopoly");
-	//	accueil.setResizable(false);
-	//	accueil.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	//	Dimension dimension = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-	//	int height = (int)dimension.getHeight();
-	//	int width  = (int)dimension.getWidth();
-		accueil.setSize( 600,500);
+		//accueil.setResizable(false);
+		accueil.setSize(600,500);
 		accueil.setLocationRelativeTo(null);
 		accueil.setVisible(true);
 		pan.setLayout(null);
@@ -79,12 +75,12 @@ public class IHM extends JFrame implements ActionListener{
 			plateau.setLocationRelativeTo(null);
 			plateau.setVisible(true);
 			pan1.setLayout(null);
-			pan1.add(Vendre).setBounds(110, 250, 150, 50);;
-			pan1.add(Enchere).setBounds(110, 350, 150, 50);;
-			pan1.add(Acheter).setBounds(110, 450, 150, 50);
-			pan1.add(Echanger).setBounds(110, 550, 150, 50);
-			pan1.add(FinDeTour).setBounds(110, 850, 150, 50);
-			pan1.add(Hypothequer).setBounds(110, 650, 150, 50);
+			pan1.add(Vendre).setBounds(110, height/8, 150, 50);;
+			pan1.add(Enchere).setBounds(110, height/4, 150, 50);;
+			pan1.add(Acheter).setBounds(110, height/8*3, 150, 50);
+			pan1.add(Echanger).setBounds(110, height/2, 150, 50);
+			pan1.add(FinDeTour).setBounds(110, height/8*7, 150, 50);
+			pan1.add(Hypothequer).setBounds(110, height/8*5, 150, 50);
 			pan1.add(Abandonner).setBounds(width - 170, height - 90, 150, 50);
 			plateau.add(pan1).setBounds(50, 400, 150, 50);
 		

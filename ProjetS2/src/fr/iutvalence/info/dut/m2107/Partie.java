@@ -323,6 +323,7 @@ public class Partie
 			joueur.changeSolde(-50);
 			Case.getProprietaire().changeSolde(50);	
 		}
+		
 	}
 	
 	/**
@@ -346,7 +347,7 @@ public class Partie
 			if(this.JoueurCourant.getNbDouble()<=3)
 			{
 				this.JoueurCourant.changeSolde(-50);
-				this.JoueurCourant.setPotition(this.Des.getValeurDes1()+this.Des.getValeurDes2()+10);
+				this.JoueurCourant.setPoition(this.Des.getValeurDes1()+this.Des.getValeurDes2()+10);
 			}
 		}
 	}

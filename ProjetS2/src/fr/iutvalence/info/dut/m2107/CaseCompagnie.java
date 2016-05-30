@@ -21,6 +21,7 @@ public class CaseCompagnie extends CasePropriete
 		this.nom = nom;
 		this.loyer = 50;
 		this.valeurAchat=150;
+		this.proprietaire=null;
 	}
 
 	/**

@@ -22,6 +22,8 @@ public class CaseGare extends CasePropriete
 		this.position = position;
 		this.nom = nom;
 		this.loyer = 50;
+		this.valeurAchat=200;
+		this.proprietaire=null;
 	}
 
 	/**

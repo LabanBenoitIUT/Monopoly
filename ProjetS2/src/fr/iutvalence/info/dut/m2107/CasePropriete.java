@@ -15,7 +15,7 @@ public abstract class CasePropriete extends Cases
 	/**
 	 * The buying value of a property case
 	 */
-	private int valeurAchat;
+	protected int valeurAchat;
 	/**
 	 * The mortgage value of a property case
 	 */

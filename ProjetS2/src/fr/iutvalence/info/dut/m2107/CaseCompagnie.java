@@ -20,6 +20,7 @@ public class CaseCompagnie extends CasePropriete
 		this.position = position;
 		this.nom = nom;
 		this.loyer = 50;
+		this.valeurAchat=150;
 	}
 
 	/**

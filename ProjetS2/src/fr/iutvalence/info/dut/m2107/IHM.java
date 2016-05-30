@@ -32,7 +32,9 @@ public class IHM extends JFrame implements ActionListener{
 	private JButton Hypothequer = new JButton("Hypothequer");
 	private JButton Abandonner = new JButton("Abandonner");
 	private JDialog accueil = new JDialog();
-	
+	private JButton Enchere = new JButton("Mise aux encheres");
+	private JLabel pan1  = new JLabel();
+
 	public IHM()
 	{
 		JLabel pan  = new JLabel();
@@ -63,7 +65,7 @@ public class IHM extends JFrame implements ActionListener{
 	{
 		if(arg0.getSource() == Jouer)
 		{
-			JLabel pan1  = new JLabel();
+			accueil.dispose();
 			JFrame plateau = new JFrame();
 			plateau.setIconImage(Toolkit.getDefaultToolkit().getImage("image\\logo.jpg"));
 			plateau.add(new JLabel(new ImageIcon(/*G:\\git\\Monopoly\\ProjetS2\\*/"image\\plateau.jpeg")));
@@ -77,11 +79,12 @@ public class IHM extends JFrame implements ActionListener{
 			plateau.setLocationRelativeTo(null);
 			plateau.setVisible(true);
 			pan1.setLayout(null);
-			pan1.add(Vendre).setBounds(20, height - 240, 150, 50);;
-			pan1.add(Acheter).setBounds(200, height - 240, 150, 50);
-			pan1.add(Echanger).setBounds(20, height - 160, 150, 50);
-			pan1.add(FinDeTour).setBounds(110, height - 90, 150, 50);
-			pan1.add(Hypothequer).setBounds(200, height - 160, 150, 50);
+			pan1.add(Vendre).setBounds(110, 250, 150, 50);;
+			pan1.add(Enchere).setBounds(110, 350, 150, 50);;
+			pan1.add(Acheter).setBounds(110, 450, 150, 50);
+			pan1.add(Echanger).setBounds(110, 550, 150, 50);
+			pan1.add(FinDeTour).setBounds(110, 850, 150, 50);
+			pan1.add(Hypothequer).setBounds(110, 650, 150, 50);
 			pan1.add(Abandonner).setBounds(width - 170, height - 90, 150, 50);
 			plateau.add(pan1).setBounds(50, 400, 150, 50);
 		
@@ -103,13 +106,41 @@ public class IHM extends JFrame implements ActionListener{
 			
 		if(arg0.getSource() == Abandonner)
 		{
-			Partie.getJoueurCourant().setEstDansLaPartie(true);
+//			Partie.getJoueurCourant().setEstDansLaPartie(true);
 		}
 		
 		//if(arg0.getSource() == FinDeTour)
 			//endOfRound = true;
+			this.accueil.dispose();
+		
+		
+		if(arg0.getSource() == FinDeTour) 
+		{
+			//Partie.endOfRound.setEndOfRound(true);
 
+		}
+		if(arg0.getSource() == Vendre)
+		{
+			JFrame vendre  = new JFrame();
+			vendre.setTitle("Voulez-vous acheter");
+			vendre.setSize( 600,500);
+			vendre.setVisible(true);
+			//Partie.Vendre();
+		}
 			
+			
+		
+		//if(arg0.getSource() == Acheter) 
+			//Acheter();
+		
+		
+		if(arg0.getSource() == Echanger) 
+			this.accueil.dispose();
+		
+		
+		//if(arg0.getSource() == Hypothequer) 
+			//partie.Hypothequer()
+		
 			
 	}
 }

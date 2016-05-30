@@ -79,7 +79,7 @@ public class Joueur
 	 */
 	public void setNbDouble(int nbDouble) 
 	{
-		this.nbDouble = nbDouble;
+		this.nbDouble = this.nbDouble+nbDouble;
 	}
 
 	/**

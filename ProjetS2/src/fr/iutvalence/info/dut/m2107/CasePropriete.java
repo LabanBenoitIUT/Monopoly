@@ -15,7 +15,7 @@ public abstract class CasePropriete extends Cases
 	/**
 	 * The buying value of a property case
 	 */
-	private int valeurAchat;
+	protected int valeurAchat;
 	/**
 	 * The mortgage value of a property case
 	 */
@@ -31,7 +31,7 @@ public abstract class CasePropriete extends Cases
 	/**
 	 * Owner of the property 
 	 */
-	private Joueur proprietaire;
+	protected Joueur proprietaire;
 	
 	/**
 	 * Used to get the value of the attribute hypotheque 
@@ -82,5 +82,10 @@ public abstract class CasePropriete extends Cases
 		return this.proprietaire;
 	
 	}
+	public void setProprietaire(Joueur proprietaire) {
+		this.proprietaire = proprietaire;
+	}
+	
+	
 }
 

@@ -29,6 +29,7 @@ public class Constructible extends CasePropriete
 		this.nom = "nom";
 		this.prixConstruction = prixConstruction;
 		this.nbConstruction = 0;
+		this.proprietaire=null;
 	}
 	
 	/**

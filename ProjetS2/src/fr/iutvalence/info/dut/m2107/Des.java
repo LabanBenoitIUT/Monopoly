@@ -29,8 +29,8 @@ public class Des
 	 * @param valueDes2
 	 */
 	public Des() {
-		ValeurDes1 = (Integer) null;
-		ValeurDes2 = (Integer) null;
+		ValeurDes1 = 0;
+		ValeurDes2 = 0;
 	}
 
 	/**

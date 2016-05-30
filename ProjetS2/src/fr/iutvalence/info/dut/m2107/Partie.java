@@ -127,7 +127,7 @@ public class Partie
 		this.joueur1 = new Joueur(name1);
 		this.joueur2 = new Joueur(name1);
 		//initialization of the dice
-		this.Des = new Des();
+		this.Des = new Des(); 
 		//initialization of the deck of lucky card
 		this.Chance = new Pioche();
 		this.Chance.put(new CarteChance("Gain","....",1500000));

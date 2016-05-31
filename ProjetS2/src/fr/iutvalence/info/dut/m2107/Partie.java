@@ -21,7 +21,7 @@ public class Partie
 	/**
 	 * the current player
 	 */
-	private Joueur JoueurCourant;
+	private static Joueur JoueurCourant;
 		
 	/**
 	 * the board
@@ -56,7 +56,7 @@ public class Partie
 	/**
 	 * boolean to check if the round of a player is over or not
 	 */
-	private boolean endOfRound;
+	private static boolean endOfRound;
 	
 	/**
 	 * setter for EndOfRound
@@ -70,8 +70,8 @@ public class Partie
 	 * getter for EndOfRound
 	 * @param endOfRound
 	 */
-	public void setEndOfRound(boolean endOfRound) {
-		this.endOfRound = endOfRound;
+	public static void setEndOfRound(boolean End) {
+		endOfRound = End;
 	}
 
 	/**
@@ -185,13 +185,13 @@ public class Partie
 		this.JoueurCourant = this.joueur1;
 		while(this.NbJoueursRestant > 1)
 		{
-			this.endOfRound=false;
+			endOfRound=false;
 			this.Des.lancerDes();
 			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
 			int pos  = this.JoueurCourant.getPosition();
 			Cases cas = this.board[pos];
 			ActionDeLaCase(cas.getType(), cas);
-			while(this.endOfRound==false)
+			while(endOfRound==false)
 			{
 				this.Des.lancerDes();
 				int ValDes = this.Des.getValeurDes1()+ this.Des.getValeurDes2(); //addition of the two dice's values
@@ -395,6 +395,11 @@ public class Partie
 	public void Acheter(CasePropriete Case, Joueur joueur){
 		joueur.changeSolde(-Case.getValeurAchat());
 		Case.setProprietaire(joueur);
+	}
+
+	public static Joueur getJoueurCourant()
+	{
+		return JoueurCourant;
 	}
 	
 }

@@ -102,11 +102,11 @@ public class IHM extends JFrame implements ActionListener{
 			
 		if(arg0.getSource() == Abandonner)
 		{
-//			Partie.getJoueurCourant().setEstDansLaPartie(true);
+			Partie.getJoueurCourant().setEstDansLaPartie(true);
 		}
 		
-		//if(arg0.getSource() == FinDeTour)
-			//endOfRound = true;
+		if(arg0.getSource() == FinDeTour)
+			Partie.setEndOfRound(true);
 			this.accueil.dispose();
 		
 		

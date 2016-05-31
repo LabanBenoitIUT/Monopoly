@@ -168,6 +168,12 @@ public class Joueur
 	public int getPosition() {
 		return this.position;	
 	}
+
+	public void setEstDansLaPartie(boolean b)
+	{
+		this.estDansLaPartie = b;
+		
+	}
 	
 	
 

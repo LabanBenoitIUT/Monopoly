@@ -174,7 +174,12 @@ public class Joueur
 		this.estDansLaPartie = b;
 		
 	}
-	
-	
+
+	/**
+	 * @return the estDansLaPartie
+	 */
+	public boolean isEstDansLaPartie() {
+		return this.estDansLaPartie;
+	}
 
 }

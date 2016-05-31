@@ -48,18 +48,7 @@ public abstract class Cartes{
 	{
 		return this.valeur;
 	}
-	
-	/**
-	 * draw a card
-	 */
-	public void piocherCarte()
-	{
-		
-	}
-
 }
-
-
 
 
 

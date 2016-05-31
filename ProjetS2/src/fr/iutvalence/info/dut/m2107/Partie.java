@@ -16,7 +16,7 @@ public class Partie
 	/**
 	 * NbJoueursRestants: number of players remaining in the game 
 	 */
-	private int NbJoueursRestant;
+	private static int NbJoueursRestant;
 	
 	/**
 	 * the current player
@@ -182,20 +182,20 @@ public class Partie
 	 */
 	public void play()
 	{
-		this.JoueurCourant = this.joueur1;
-		while(this.NbJoueursRestant > 1)
+		Partie.JoueurCourant = this.joueur1;
+		while(Partie.NbJoueursRestant > 1)
 		{
 			endOfRound=false;
 			this.Des.lancerDes();
-			this.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
-			int pos  = this.JoueurCourant.getPosition();
+			Partie.JoueurCourant.deplace(this.Des.getValeurDes1() + this.Des.getValeurDes2());
+			int pos  = Partie.JoueurCourant.getPosition();
 			Cases cas = this.board[pos];
 			ActionDeLaCase(cas.getType(), cas);
 			while(endOfRound==false)
 			{
 				this.Des.lancerDes();
 				int ValDes = this.Des.getValeurDes1()+ this.Des.getValeurDes2(); //addition of the two dice's values
-				this.JoueurCourant.deplace(ValDes); //move the current player position
+				Partie.JoueurCourant.deplace(ValDes); //move the current player position
 				cas.getType();
 			}
 			switchJoueurCourant();
@@ -215,7 +215,7 @@ public class Partie
 			  //...
 			  break;
 		  case "Aller en prison":
-			  	this.JoueurCourant.setPosition(10);
+			  	Partie.JoueurCourant.setPosition(10);
 			  break;
 		  case "Chance":
 			  this.Chance.get();
@@ -224,41 +224,41 @@ public class Partie
 			  this.CaisseCommunaute.get();
 			  break;
 		  case "Compagnie":
-			  GereCompagnie((CaseCompagnie) cas, this.JoueurCourant);
+			  GereCompagnie((CaseCompagnie) cas, Partie.JoueurCourant);
 			  break;
 		  case "Depart":
-			  this.JoueurCourant.changeSolde(CaseDepart.getSOMME());
+			  Partie.JoueurCourant.changeSolde(CaseDepart.getSOMME());
 			  break;
 		  case "Gare":
-			  GereGare((CaseGare) cas, this.JoueurCourant);
+			  GereGare((CaseGare) cas, Partie.JoueurCourant);
 			  break;
 		  case "impot":
-			  this.JoueurCourant.changeSolde(CaseImpot.getSomme());
+			  Partie.JoueurCourant.changeSolde(CaseImpot.getSomme());
 			  break;
 		  case "Parc Gratuit":
-			  this.JoueurCourant.changeSolde(CaseParcGratuit.getSomme());
+			  Partie.JoueurCourant.changeSolde(CaseParcGratuit.getSomme());
 			  break;
 		  case "Prison":
-			  if(this.JoueurCourant.isEnPrison() == true)
+			  if(Partie.JoueurCourant.isEnPrison() == true)
 			  {
-				  if(this.JoueurCourant.getNbTourPrison() > 3 )
+				  if(Partie.JoueurCourant.getNbTourPrison() > 3 )
 				  {
-					  this.JoueurCourant.changeSolde(-500);
-					  this.JoueurCourant.setEnPrison(false);
+					  Partie.JoueurCourant.changeSolde(-500);
+					  Partie.JoueurCourant.setEnPrison(false);
 				  }
 				  else
 				  {
 					  this.Des.lancerDes();
 					  if (this.Des.isDouble(this.Des.getValeurDes1(), this.Des.getValeurDes2())==true)
 					  {
-						  this.JoueurCourant.setEnPrison(false);
+						  Partie.JoueurCourant.setEnPrison(false);
 					  }
 					  	
 				  }  
 			  }  
 			  break;
 		  case "Taxe de luxe":
-			  this.JoueurCourant.changeSolde(CaseTaxe.getSomme());
+			  Partie.JoueurCourant.changeSolde(CaseTaxe.getSomme());
 			  break;
 		}
 	}
@@ -268,15 +268,15 @@ public class Partie
 	 */
 	public void switchJoueurCourant() 
 	{
-		if(this.JoueurCourant == this.joueur1)
+		if(Partie.JoueurCourant == this.joueur1)
 		{
-			this.joueur1 = this.JoueurCourant;
-			this.JoueurCourant = this.joueur2;
+			this.joueur1 = Partie.JoueurCourant;
+			Partie.JoueurCourant = this.joueur2;
 		}
 		else
 		{
-			this.joueur2 = this.JoueurCourant;
-			this.JoueurCourant = this.joueur1;
+			this.joueur2 = Partie.JoueurCourant;
+			Partie.JoueurCourant = this.joueur1;
 		}
 	}
 	
@@ -353,21 +353,21 @@ public class Partie
 	 */
 	public void GereDouble()
 	{
-		if(this.JoueurCourant.getPosition() != 10)
+		if(Partie.JoueurCourant.getPosition() != 10)
 		{
 			if(this.Des.getValeurDes1() == this.Des.getValeurDes2())
-				this.JoueurCourant.setNbDouble(1);
-			if(this.JoueurCourant.getNbDouble()<=3)
-				this.JoueurCourant.setPosition(10);
+				Partie.JoueurCourant.setNbDouble(1);
+			if(Partie.JoueurCourant.getNbDouble()<=3)
+				Partie.JoueurCourant.setPosition(10);
 		}
 		else
 		{
 			if(this.Des.getValeurDes1() == this.Des.getValeurDes2())
-				this.JoueurCourant.setNbDouble(1);
-			if(this.JoueurCourant.getNbDouble()<=3)
+				Partie.JoueurCourant.setNbDouble(1);
+			if(Partie.JoueurCourant.getNbDouble()<=3)
 			{
-				this.JoueurCourant.changeSolde(-50);
-				this.JoueurCourant.setPosition(this.Des.getValeurDes1()+this.Des.getValeurDes2()+10);
+				Partie.JoueurCourant.changeSolde(-50);
+				Partie.JoueurCourant.setPosition(this.Des.getValeurDes1()+this.Des.getValeurDes2()+10);
 
 			}
 		}
@@ -401,5 +401,14 @@ public class Partie
 	{
 		return JoueurCourant;
 	}
-	
+
+	/**
+	 * @param nbJoueursRestant the nbJoueursRestant to set
+	 */
+	public void setNbJoueursRestant() {
+		if(this.joueur1.isEstDansLaPartie()== false)
+			NbJoueursRestant = 1;
+		else if(this.joueur2.isEstDansLaPartie()== false)
+			NbJoueursRestant = 2;
+		}
 }

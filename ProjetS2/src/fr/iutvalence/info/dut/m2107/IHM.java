@@ -87,34 +87,15 @@ public class IHM extends JFrame implements ActionListener{
 		}
 		if(arg0.getSource() == Quitter) 
 			accueil.dispose();
-		
-		if(arg0.getSource() == Acheter) 
-			
-			
-		if(arg0.getSource() == Vendre) 
 
-			
-		if(arg0.getSource() == Echanger) 
-
-			
-		if(arg0.getSource() == Hypothequer) 
-
-			
 		if(arg0.getSource() == Abandonner)
 		{
-			Partie.getJoueurCourant().setEstDansLaPartie(true);
+			Partie.getJoueurCourant().setEstDansLaPartie(false);
 		}
 		
 		if(arg0.getSource() == FinDeTour)
-			Partie.setEndOfRound(true);
-			this.accueil.dispose();
-		
-		
-		if(arg0.getSource() == FinDeTour) 
-		{
-			//Partie.endOfRound.setEndOfRound(true);
+			Partie.setEndOfRound(true);		
 
-		}
 		if(arg0.getSource() == Vendre)
 		{
 			JFrame vendre  = new JFrame();
@@ -123,20 +104,17 @@ public class IHM extends JFrame implements ActionListener{
 			vendre.setVisible(true);
 			//Partie.Vendre();
 		}
+
+	/*	if(arg0.getSource() == Acheter)
+			Acheter();
 			
-			
-		
-		//if(arg0.getSource() == Acheter) 
-			//Acheter();
+		if(arg0.getSource() == Echanger)
+			Partie.EchangeBiens(null);
 		
 		
-		if(arg0.getSource() == Echanger) 
-			this.accueil.dispose();
+		if(arg0.getSource() == Hypothequer) 
+			Partie.Hypothequer();
 		
-		
-		//if(arg0.getSource() == Hypothequer) 
-			//partie.Hypothequer()
-		
-			
+			*/
 	}
 }

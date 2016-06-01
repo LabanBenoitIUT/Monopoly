@@ -83,6 +83,7 @@ public class IHM extends JFrame implements ActionListener{
 			pan1.add(Hypothequer).setBounds(110, height/8*5, 150, 50);
 			pan1.add(Abandonner).setBounds(width - 170, height - 90, 150, 50);
 			plateau.add(pan1).setBounds(50, 400, 150, 50);
+			//new Partie().play();
 		
 		}
 		if(arg0.getSource() == Quitter) 

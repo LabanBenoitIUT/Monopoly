@@ -168,7 +168,18 @@ public class Joueur
 	public int getPosition() {
 		return this.position;	
 	}
-	
-	
+
+	public void setEstDansLaPartie(boolean b)
+	{
+		this.estDansLaPartie = b;
+		
+	}
+
+	/**
+	 * @return the estDansLaPartie
+	 */
+	public boolean isEstDansLaPartie() {
+		return this.estDansLaPartie;
+	}
 
 }

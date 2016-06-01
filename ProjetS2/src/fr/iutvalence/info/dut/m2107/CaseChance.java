@@ -17,12 +17,4 @@ public class CaseChance extends Cases
 		this.position = position;
 		this.nom = "Chance";
 	}
-	/**
-	 * tirerCarte: draw a card Chance 
-	 */
-	public void tirerCarte()
-	{
-		
-	}
-
 }

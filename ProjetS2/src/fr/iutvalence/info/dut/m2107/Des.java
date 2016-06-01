@@ -58,7 +58,6 @@ public class Des
 		return ValeurDes2;
 	}
 
-	
 	/**
 	 * boolean to check if the values of the twice dice are the same
 	 * @return boolean resultDouble
@@ -71,5 +70,4 @@ public class Des
 			resultDouble = true;}
 		return resultDouble;
 	}
-	
 }

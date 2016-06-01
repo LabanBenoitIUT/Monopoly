@@ -12,13 +12,4 @@ public class CaseCommunaute extends Cases
 		this.position = position;
 		this.nom = "Caisse de communaute";
 	}
-	/**
-	 * tirerCarte: draw a card
-	 */
-	public void tirerCarte()
-	{
-		
-	}
-
-
 }

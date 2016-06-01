@@ -1,5 +1,7 @@
 package fr.iutvalence.info.dut.m2107;
 
-public class FullPiocheException extends Exception {
+@SuppressWarnings("serial")
+public class FullPiocheException extends Exception 
+{
 
 }

@@ -18,12 +18,28 @@ public class CarteCaisseDeCommunaute extends Cartes
 		this.texte = texte;
 		this.valeur = valeur;
 	}
-/**
- * Method which execute the card's instruction	
- */
-public void executer()
-{
-	
-}
-
+	/**
+	 * Method which execute the card's instruction	
+	 */
+	public void executer()
+	{
+		switch(this.type)
+		{
+		case "Gain":
+			Partie.getJoueurCourant().changeSolde(this.valeur);
+			break;
+		case "Perte":
+			Partie.getJoueurCourant().changeSolde(-this.valeur);
+			break;
+		case "Avancer":
+			Partie.getJoueurCourant().deplace(this.valeur);
+			break;
+		case "Aller en prison":
+			Partie.getJoueurCourant().setPosition(this.valeur);
+			break;
+		case "Sortie de prison":
+			Partie.getJoueurCourant().setEnPrison(false);
+			break;
+		}	
+	}
 }

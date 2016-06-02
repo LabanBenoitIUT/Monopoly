@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="fr.iutvalence.info.dut.m2107.Constructible" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/Constructible.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="722" y="612"/>    
+    <position height="-1" width="-1" x="731" y="528"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="fr.iutvalence.info.dut.m2107.CaseTaxe" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/CaseTaxe.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="524" y="623"/>    
+    <position height="-1" width="-1" x="430" y="599"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="fr.iutvalence.info.dut.m2107.CaseImpot" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/CaseImpot.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="455" y="755"/>    
+    <position height="-1" width="-1" x="276" y="700"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="fr.iutvalence.info.dut.m2107.CaseDepart" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/CaseDepart.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="404" y="1031"/>    
+    <position height="-1" width="-1" x="429" y="908"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="fr.iutvalence.info.dut.m2107.CasePrison" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/CasePrison.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="821" y="1020"/>    
+    <position height="-1" width="-1" x="811" y="886"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="fr.iutvalence.info.dut.m2107.Cases" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/Cases.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="628" y="802"/>    
+    <position height="-1" width="-1" x="577" y="670"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="fr.iutvalence.info.dut.m2107.CaseCommunaute" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/CaseCommunaute.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="676" y="1024"/>    
+    <position height="-1" width="-1" x="666" y="885"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -156,7 +156,7 @@
   </class>  
   <class id="18" language="java" name="fr.iutvalence.info.dut.m2107.CaseChance" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/CaseChance.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="542" y="1027"/>    
+    <position height="-1" width="-1" x="567" y="983"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -165,7 +165,7 @@
   </class>  
   <class id="19" language="java" name="fr.iutvalence.info.dut.m2107.CaseAllerEnPrison" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/CaseAllerEnPrison.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="452" y="889"/>    
+    <position height="-1" width="-1" x="422" y="771"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -183,7 +183,7 @@
   </class>  
   <class id="21" language="java" name="fr.iutvalence.info.dut.m2107.CaseParcGratuit" project="ProjetS2" 
     file="/ProjetS2/src/fr/iutvalence/info/dut/m2107/CaseParcGratuit.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="818" y="895"/>    
+    <position height="-1" width="-1" x="766" y="751"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -209,18 +209,17 @@
   <association id="26">    
     <end type="SOURCE" refId="20" navigable="false">      
       <attribute id="27" name="board">        
-        <position height="0" width="0" x="0" y="-323"/>      
+        <position height="0" width="0" x="-51" y="-455"/>      
       </attribute>      
       <multiplicity id="28" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="-323"/>      
+        <position height="0" width="0" x="-51" y="-455"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="29">    
-    <bendpoint x="640" y="514"/>    
-    <bendpoint x="805" y="504"/>    
+    <bendpoint x="686" y="388"/>    
     <end type="SOURCE" refId="20" navigable="false">      
       <attribute id="30" name="joueur1">        
         <position height="0" width="0" x="-127" y="3"/>      
